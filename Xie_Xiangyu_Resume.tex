@@ -1,0 +1,135 @@
+%% The MIT License (MIT)
+%%
+%% Xie Xiangyu (谢翔宇) Resume for AI for Science Internship
+%% Target: DeepSeeking (深势科技) - Computational Chemistry/AI Position
+%% Template: McDowell CV (adapted for STEM research applications)
+%% Compile with: xelatex Xie_Xiangyu_Resume.tex
+
+% The font could be set to Windows-specific Calibri by using the 'calibri' option
+\documentclass[]{mcdowellcv}
+
+% For mathematical symbols
+\usepackage{amsmath}
+
+% For hyperlinks
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+    pdfauthor={Xiangyu Xie},
+    pdftitle={Resume - Xiangyu Xie}
+}
+
+% Set applicant's personal data for header
+\name{Xiangyu Xie}
+\address{University of Science and Technology of China \linebreak Department of Chemical Physics, Class of 2026}
+\contacts{Email: \hrefmailto{xxy220348@mail.ustc.edu.cn}{xxy220348@mail.ustc.edu.cn} \linebreak Phone: +86 18390703209 \linebreak Website: \href{https://techandscixie2005.github.io/portfolio}{techandscixie2005.github.io/portfolio}}
+
+\begin{document}
+
+% Print the header
+\makeheader
+
+% Print the content
+\begin{cvsection}{Education}
+	\begin{cvsubsection}{Hefei, China}{University of Science and Technology of China }{Fall 2022 -- Expected Spring 2026}
+		\begin{itemize}
+			\item \textbf{B.S. in Chemical Physics}, Class of 2026
+			\item \textbf{GPA:} 3.23/4.3 (Rank: 56/116) -- Demonstrating consistent upward trajectory: Freshman (2.6), Sophomore (3.4), Junior (3.5)
+			\item \textbf{Advisor:} Prof. Jun Jiang (Computational Chemistry \& AI for Science)
+			\item \textbf{Relevant Coursework:} Quantum Mechanics, Statistical Mechanics, Mathematical Physics Equations, Machine Learning Fundamentals, Computational Chemistry, Group Theory, Linear Algebra
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{Research Experience}
+	\begin{cvsubsection}{Graduate Project}{Supervisor: Prof. Jun Jiang}{Fall 2025 -- Spring 2026}
+		\textbf{Prediction of Room-Temperature Phosphorescence Molecular Properties Based on Equivariant Graph Neural Networks}
+		\begin{itemize}
+			\item \textbf{Dataset:} Curated 6,000 RTP-active organic molecules with DFT-calculated photophysical properties ($\Delta E_{S_1-T_1}$, SOC, oscillator strength)
+			\item \textbf{Model Architecture:} Designed 8-layer EGNN\_Sparse\_Network with SE(3)-equivariant message passing; implemented 21-dim node features (atom type, hybridization, aromaticity) and 6-dim edge features
+			\item \textbf{Training Strategy:} Applied geometric data augmentation (rotation, translation), layer-wise incremental Dropout, and ReduceLROnPlateau scheduling to enhance generalization under small-sample scenario
+			\item \textbf{Results:} Achieved $R^2$=0.9855 for $SOC_{T_1-S_0}$ prediction and $R^2$=0.8781 for $\Delta E_{S_1-T_1}$ prediction on test set
+			\item \textbf{Innovation:} First systematic application of equivariant GNN to RTP property prediction; proposed adaptive pooling strategy combining mean/max/sum pooling with learnable weights
+			\item \textbf{Skills:} PyTorch, Graph Neural Networks, SE(3) Equivariance, Quantum Chemistry, Python, Linux
+		\end{itemize}
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{Undergraduate Research}{Supervisor: Prof. Linsong Cui}{Fall 2023 -- Fall 2024}
+		\textbf{Design and Synthesis of Light-Emitting Materials Based on Doublet-Emissive Mechanism}
+		\begin{itemize}
+			\item \textbf{Project:} Undergraduate Research Program; successfully completed and passed final evaluation
+			\item \textbf{Molecular Design \& Synthesis:} Designed TTM-AnQ radical by coupling TTM radical with 9,10-anthraquinone acceptor; executed multi-step synthesis via Friedel–Crafts, Suzuki coupling, and oxidation
+			\item \textbf{Characterization:} Conducted UV-Vis, fluorescence, CV, and transient fluorescence measurements; observed emission red-shift from 580nm to 695nm upon acceptor incorporation
+			\item \textbf{Key Finding:} Demonstrated SOMO energy modulation (-2.82eV → -3.18eV), revealing novel emission tuning pathway beyond traditional donor-functionalization; first systematic study of acceptor-functionalized radical emitters
+		\end{itemize}
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{Undergraduate Competition}{Digital Intelligence Track}{Fall 2024 -- Spring 2025}
+		\textbf{Multiscale Molecular Simulation-Driven Physical Chemistry Experiment Teaching Innovation}
+		\begin{itemize}
+			\item \textbf{Framework:} Developed "Experiment + Computation" integrated protocol combining MD simulations (GROMACS) with DFT calculations (Gaussian 16, B3LYP/6-31G+g(d,p))
+			\item \textbf{Simulations:} Built n-butanol/cyclohexane models (17:400 and 1:400); performed energy minimization, equilibrium, and production runs at 30°C; extracted 100 trajectory frames for DFT computation
+			\item \textbf{Results:} Achieved 1.78D predicted dipole moment (6.0\% deviation from experimental 1.66D); revealed microscopic origin of infinite dilution extrapolation method
+			\item \textbf{Award:} \textbf{First Prize, Central China Division} of the 5th National Undergraduate Chemistry Experiment Innovation Design Competition (Digital Intelligence Track)
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\newpage
+
+\begin{cvsection}{Awards and Honors}
+	\begin{cvsubsection}{}{}{}
+		\begin{itemize}
+			\item \textbf{USTC Outstanding Student Scholarship} -- Awarded for academic excellence (2024, 2025)
+			\item \textbf{USTC Strengthening Basic Disciplines Plan Grant} -- Top 20\% of students eligible (2025)
+			\item \textbf{Undergraduate Competition, Central China Division -- First Prize} -- 5th National Undergraduate Chemistry Experiment Innovation Design Competition, Digital Intelligence Track (2025)
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{Academic Exchanges}
+	\begin{cvsubsection}{Research Visits}{Multiple Institutes}{}{}
+		\begin{itemize}
+			\item \textbf{August 2023:} Dalian Institute of Chemical Physics, Changchun Institute of Applied Chemistry, Shenyang Institute of Metal Research
+			\item \textbf{August 2025:} Shanghai Institute of Organic Chemistry, Shanghai Institute of Ceramics, Suzhou Institute of Nano-Tech and Nano-Bionics
+			\item \textbf{July 2025:} Hong Kong University, HKUST, Chinese University of Hong Kong, City University of Hong Kong
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{Teaching Experience}
+	\begin{cvsubsection}{Teaching Assistant}{}{}{}
+		\begin{itemize}
+			\item \textbf{Fall 2024:} Complex Analysis (for Chemistry) -- Led discussion sections, graded assignments, provided one-on-one tutoring
+			\item \textbf{Spring 2025:} Mathematical Physics Equations (B) -- Facilitated problem-solving sessions, developed supplementary materials
+			\item \textbf{Spring 2026:} Quantum Physics -- Demonstrating strong command of theoretical foundations
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{Technical Skills}
+	\begin{cvsubsection}{Programming and Tools}{}{}
+		\begin{itemize}
+			\item \textbf{Machine Learning:} PyTorch (GNNs, deep learning), scikit-learn, Neural Network Architecture Design
+			\item \textbf{Programming Languages:} Python (primary), MATLAB, basic C++
+			\item \textbf{Computational Chemistry:} DFT/TD-DFT calculations, Quantum Chemistry Software (Gaussian, VASP), Molecular Visualization
+			\item \textbf{Mathematical Foundations:} Linear Algebra, Group Theory, Probability and Statistics, Complex Analysis
+			\item \textbf{General Tools:} LaTeX, Git, Linux/Unix command line, Data Analysis (numpy, pandas, matplotlib)
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{Strengths}
+	\begin{cvsubsection}{}{}{}
+		\begin{itemize}
+			\item \textbf{Solid Mathematical Foundation:} Strong grasp of theoretical chemistry and mathematical physics principles
+			\item \textbf{Logical Thinking:} Ability to derive novel research questions and formulate rigorous analytical approaches
+			\item \textbf{Professional Competence:} Demonstrated ability to execute complex research projects from conception to completion
+			\item \textbf{Interdisciplinary Approach:} Combining wet lab synthesis with computational modeling
+			\item \textbf{Collaborative Researcher:} Experience working across multiple research groups and institutions
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\end{document}
