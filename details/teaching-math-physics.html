@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematical Physics Equations (Spring 2025) | Xie Xiangyu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .detail-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: var(--bg-secondary);
+            padding: 6rem 2rem 4rem;
+        }
+        .detail-hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent-purple-glow) 0%, transparent 70%);
+            filter: blur(80px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .detail-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            transition: var(--transition-fast);
+        }
+        .back-link:hover {
+            color: var(--accent-purple);
+        }
+        .back-link i {
+            width: 18px;
+            height: 18px;
+        }
+        .detail-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .detail-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .detail-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .detail-meta-item i {
+            width: 16px;
+            height: 16px;
+            color: var(--accent-blue);
+        }
+        .detail-section {
+            margin-bottom: 3rem;
+        }
+        .detail-section h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-purple);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .detail-section h2 i {
+            width: 20px;
+            height: 20px;
+        }
+        .detail-section p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .detail-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .detail-section li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .detail-section li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+        .highlight-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .highlight-box h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        .course-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .info-item {
+            background: var(--bg-secondary);
+            padding: 1.25rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .info-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+        .info-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#teaching" class="back-link">
+        <i data-lucide="arrow-left"></i>
+        Back to Teaching
+    </a>
+
+    <div class="detail-hero">
+        <div class="detail-content">
+            <h1 class="detail-title">Mathematical Physics Equations (B)</h1>
+            <div class="detail-meta">
+                <div class="detail-meta-item">
+                    <i data-lucide="calendar"></i>
+                    Spring 2025
+                </div>
+                <div class="detail-meta-item">
+                    <i data-lucide="book-open"></i>
+                    Core Physics Course
+                </div>
+                <div class="detail-meta-item">
+                    <i data-lucide="users"></i>
+                    ~115 students
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail-content">
+        <div class="detail-section">
+            <h2><i data-lucide="file-text"></i> Course Overview</h2>
+            <p>Mathematical Physics Equations (B) is a core physics course that covers the fundamental partial differential equations (PDEs) and special functions used in physics. The course provides essential mathematical tools for students pursuing advanced studies in theoretical physics, quantum mechanics, and related fields.</p>
+            <p>As a teaching assistant, I facilitated problem-solving sessions, developed supplementary materials, and provided support to help students master challenging topics including Fourier series, separation of variables, and special functions like Bessel functions and Legendre polynomials.</p>
+        </div>
+
+        <div class="highlight-box">
+            <h3><i data-lucide="info"></i> Course Information</h3>
+            <div class="course-info-grid">
+                <div class="info-item">
+                    <div class="info-value">Spring 2025</div>
+                    <div class="info-label">Semester</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-value">~115</div>
+                    <div class="info-label">Students</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-value">Problem Sessions</div>
+                    <div class="info-label">Format</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="check-circle"></i> Responsibilities</h2>
+            <ul>
+                <li><strong>Facilitated problem-solving sessions</strong> to reinforce lecture concepts</li>
+                <li><strong>Developed supplementary materials</strong> for PDEs and special functions</li>
+                <li><strong>Held regular office hours</strong> for students struggling with challenging topics</li>
+                <li><strong>Assisted with exam proctoring and grading</strong> to ensure fair assessment</li>
+                <li><strong>Created practice problems</strong> with detailed solutions to help students prepare</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="book-open"></i> Topics Covered</h2>
+            <ul>
+                <li><strong>Chapter 1: Mathematical Physics PDEs</strong> (7 hours) - Basic concepts, three types of equations, well-posed problems</li>
+                <li><strong>Chapter 2: Separation of Variables</strong> (7 hours) - Method introduction, eigenvalue problems, Sturm-Liouville theorem</li>
+                <li><strong>Chapter 3: Special Functions</strong> (8 hours) - Bessel functions, Legendre functions</li>
+                <li><strong>Chapter 4: Integral Transform Methods</strong> (3 hours) - Fourier transform, Laplace transform</li>
+                <li><strong>Chapter 5: Fundamental Solutions and Integral Representations</strong> (9 hours) - δ function, Green's function</li>
+            </ul>
+
+        <div class="detail-section">
+            <h2><i data-lucide="lightbulb"></i> Teaching Approach</h2>
+            <p>I focused on building strong problem-solving skills through guided practice and worked examples:</p>
+            <ul>
+                <li><strong>Step-by-step solutions:</strong> Demonstrating the problem-solving process</li>
+                <li><strong>Physical intuition:</strong> Connecting mathematical techniques to physical applications</li>
+                <li><strong>Supplementary materials:</strong> Developing handouts that bridge gaps in textbooks</li>
+                <li><strong>Office hours:</strong> Providing personalized support for struggling students</li>
+                <li><strong>Exam preparation:</strong> Creating practice problems that mirror exam difficulty</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="file-text"></i> Supplementary Materials Developed</h2>
+            <p>I developed several supplementary materials to help students grasp difficult concepts:</p>
+            <ul>
+                <li><strong>PDE Solution Guide:</strong> A comprehensive guide to the method of separation of variables</li>
+                <li><strong>Special Functions Summary:</strong> Quick reference sheets for Bessel and Legendre functions</li>
+                <li><strong>Practice Problem Sets:</strong> 50+ problems with detailed solutions</li>
+                <li><strong>Exam Preparation Notes:</strong> Key formulas and problem-solving strategies</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="star"></i> Key Takeaways</h2>
+            <ul>
+                <li>Improved ability to explain complex mathematical concepts in accessible terms</li>
+                <li>Developed original educational materials for supplementary learning</li>
+                <li>Strengthened mentoring skills through one-on-one interactions</li>
+                <li>Deepened understanding of mathematical physics through teaching</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

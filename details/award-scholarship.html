@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USTC Outstanding Student Scholarship | Xie Xiangyu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .detail-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: var(--bg-secondary);
+            padding: 6rem 2rem 4rem;
+        }
+        .detail-hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent-purple-glow) 0%, transparent 70%);
+            filter: blur(80px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .detail-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            transition: var(--transition-fast);
+        }
+        .back-link:hover {
+            color: var(--accent-purple);
+        }
+        .back-link i {
+            width: 18px;
+            height: 18px;
+        }
+        .detail-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .detail-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .detail-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .detail-meta-item i {
+            width: 16px;
+            height: 16px;
+            color: var(--accent-blue);
+        }
+        .detail-section {
+            margin-bottom: 3rem;
+        }
+        .detail-section h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-purple);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .detail-section h2 i {
+            width: 20px;
+            height: 20px;
+        }
+        .detail-section p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .detail-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .detail-section li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .detail-section li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+        .highlight-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .highlight-box h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .achievement-item {
+            background: var(--bg-secondary);
+            padding: 1.25rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .achievement-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.25rem;
+        }
+        .achievement-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#awards" class="back-link">
+        <i data-lucide="arrow-left"></i>
+        Back to Awards
+    </a>
+
+    <div class="detail-hero">
+        <div class="detail-content">
+            <h1 class="detail-title">USTC Outstanding Student Scholarship</h1>
+            <div class="detail-meta">
+                <div class="detail-meta-item">
+                    <i data-lucide="calendar"></i>
+                    2024, 2025
+                </div>
+                <div class="detail-meta-item">
+                    <i data-lucide="medal"></i>
+                    University-Level Award
+                </div>
+                <div class="detail-meta-item">
+                    <i data-lucide="map-pin"></i>
+                    University of Science and Technology of China
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail-content">
+        <div class="detail-section">
+            <h2><i data-lucide="file-text"></i> About the Scholarship</h2>
+            <p>The USTC Outstanding Student Scholarship is a prestigious university-level award recognizing exceptional academic performance and holistic development among undergraduate students at the University of Science and Technology of China.</p>
+            <p>This scholarship is awarded to students who demonstrate excellence not only in academic achievement but also in research, personal development, and contribution to the university community.</p>
+        </div>
+
+        <div class="highlight-box">
+            <h3><i data-lucide="award"></i> Award Details</h3>
+            <div class="achievement-grid">
+                <div class="achievement-item">
+                    <div class="achievement-value">2024</div>
+                    <div class="achievement-label">First Year</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-value">2025</div>
+                    <div class="achievement-label">Second Year</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-value">GPA 3.23</div>
+                    <div class="achievement-label">Overall</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="trophy"></i> Selection Criteria</h2>
+            <p>The USTC Outstanding Student Scholarship considers multiple factors:</p>
+            <ul>
+                <li><strong>Academic Performance:</strong> Strong GPA and transcript</li>
+                <li><strong>Research Experience:</strong> Active participation in research projects</li>
+                <li><strong>Coursework Excellence:</strong> Outstanding performance in core subjects</li>
+                <li><strong>Holistic Development:</strong> Involvement in extracurricular activities</li>
+                <li><strong>Character and Leadership:</strong> Demonstrated integrity and leadership potential</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="star"></i> Achievement Summary</h2>
+            <p>I was honored to receive this scholarship for two consecutive years, which reflects my consistent commitment to academic excellence and research:</p>
+            <ul>
+                <li><strong>2024:</strong> Recognized for strong performance in foundational courses and early research involvement</li>
+                <li><strong>2025:</strong> Acknowledged for continued academic excellence and contributions to research projects</li>
+                <li><strong>Growth Trajectory:</strong> GPA improved from 2.6 (Freshman) to 3.4 (Sophomore) to 3.5 (Junior)</li>
+                <li><strong>Research:</strong> Active participation in multiple research projects throughout my studies</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="lightbulb"></i> Significance</h2>
+            <p>Receiving the USTC Outstanding Student Scholarship for two consecutive years represents significant recognition of my academic journey at USTC:</p>
+            <ul>
+                <li>Validates my hard work and dedication to academic excellence</li>
+                <li>Recognizes my growth from a first-year student to an established researcher</li>
+                <li>Motivates continued pursuit of excellence in both academics and research</li>
+                <li>Provides financial support for my continued education</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

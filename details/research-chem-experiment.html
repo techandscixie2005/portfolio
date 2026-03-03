@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiscale Molecular Simulation | Xie Xiangyu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .detail-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: var(--bg-secondary);
+            padding: 6rem 2rem 4rem;
+        }
+        .detail-hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent-purple-glow) 0%, transparent 70%);
+            filter: blur(80px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .detail-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            transition: var(--transition-fast);
+        }
+        .back-link:hover {
+            color: var(--accent-purple);
+        }
+        .back-link i {
+            width: 18px;
+            height: 18px;
+        }
+        .detail-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .detail-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .detail-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .detail-meta-item i {
+            width: 16px;
+            height: 16px;
+            color: var(--accent-blue);
+        }
+        .detail-section {
+            margin-bottom: 3rem;
+        }
+        .detail-section h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-purple);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .detail-section h2 i {
+            width: 20px;
+            height: 20px;
+        }
+        .detail-section p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .detail-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .detail-section li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .detail-section li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+        .highlight-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .highlight-box h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .result-item {
+            background: var(--bg-secondary);
+            padding: 1.25rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .result-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.25rem;
+        }
+        .result-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .award-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--gradient-main);
+            border-radius: 50px;
+            color: white;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#research" class="back-link">
+        <i data-lucide="arrow-left"></i>
+        Back to Research
+    </a>
+
+    <div class="detail-hero">
+        <div class="detail-content">
+            <div class="award-badge">
+                <i data-lucide="trophy"></i>
+                First Prize, Central China Division
+            </div>
+            <h1 class="detail-title">Multiscale Molecular Simulation-Driven Physical Chemistry Experiment Teaching Innovation</h1>
+            <div class="detail-meta">
+                <div class="detail-meta-item">
+                    <i data-lucide="calendar"></i>
+                    Fall 2024 - Spring 2025
+                </div>
+                <div class="detail-meta-item">
+                    <i data-lucide="tag"></i>
+                    Competition Project
+                </div>
+                <div class="detail-meta-item">
+                    <i data-lucide="award"></i>
+                    5th National Undergraduate Chemistry Experiment Innovation Design Competition
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail-content">
+        <div class="detail-section">
+            <h2><i data-lucide="file-text"></i> Overview</h2>
+            <p>This project pioneered a novel approach to physical chemistry experiment teaching by integrating multiscale molecular simulation with experimental measurements. The goal was to bridge the gap between theoretical concepts and practical laboratory experience, providing students with a deeper understanding of molecular-level phenomena.</p>
+            <p>Our project focused on measuring the dipole moment of n-butanol/cyclohexane mixtures using both experimental techniques and computational simulations, demonstrating how molecular dynamics (MD) and density functional theory (DFT) can enhance traditional chemistry education.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="git-branch"></i> Computational Framework</h2>
+            <p>We employed a multi-level computational approach:</p>
+            <ul>
+                <li><strong>Molecular Dynamics (GROMACS):</strong> Simulated solution-phase behavior and molecular interactions</li>
+                <li><strong>DFT Calculations (Gaussian 16):</strong> B3LYP/6-31G+g(d,p) level for accurate electronic properties</li>
+                <li><strong>Solvent Modeling:</strong> Explicit solvent simulations with appropriate force fields</li>
+                <li><strong>Property Extraction:</strong> Dipole moment calculations from charge distributions</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="atom"></i> Molecular Models</h2>
+            <p>We built two types of molecular models to study concentration effects:</p>
+            <ul>
+                <li><strong>High Concentration:</strong> 17 n-butanol molecules : 400 cyclohexane molecules (1:23.5 ratio)</li>
+                <li><strong>Low Concentration:</strong> 1 n-butanol molecule : 400 cyclohexane molecules (1:400 ratio)</li>
+                <li><strong>Force Field:</strong> OPLS-AA for accurate parameterization</li>
+                <li><strong>Simulation Duration:</strong> 50ns production runs after equilibration</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h3><i data-lucide="trending-up"></i> Results</h3>
+            <div class="result-grid">
+                <div class="result-item">
+                    <div class="result-value">1.78D</div>
+                    <div class="result-label">Predicted (MD)</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">1.66D</div>
+                    <div class="result-label">Experimental</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">6.0%</div>
+                    <div class="result-label">Deviation</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="lightbulb"></i> Educational Impact</h2>
+            <ul>
+                <li>Demonstrates the power of computational chemistry in understanding experimental results</li>
+                <li>Provides students with hands-on experience in multiscale modeling</li>
+                <li>Bridges the gap between theoretical and experimental chemistry</li>
+                <li>Creates a template for future innovation in chemistry education</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="award"></i> Competition Achievement</h2>
+            <p><strong>First Prize, Central China Division</strong></p>
+            <p>5th National Undergraduate Chemistry Experiment Innovation Design Competition, Digital Intelligence Track</p>
+            <p>This project was recognized for its innovative approach to integrating computational simulations with traditional chemistry laboratory teaching, representing a significant advancement in chemistry education methodology.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="code"></i> Technologies Used</h2>
+            <div class="skill-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="skill-tag">GROMACS</span>
+                <span class="skill-tag">DFT</span>
+                <span class="skill-tag">Molecular Dynamics</span>
+                <span class="skill-tag">Gaussian</span>
+                <span class="skill-tag">Computational Chemistry</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

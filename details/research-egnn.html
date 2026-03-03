@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTP Prediction with EGNN | Xie Xiangyu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .detail-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: var(--bg-secondary);
+            padding: 6rem 2rem 4rem;
+        }
+        .detail-hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent-purple-glow) 0%, transparent 70%);
+            filter: blur(80px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .detail-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            transition: var(--transition-fast);
+        }
+        .back-link:hover {
+            color: var(--accent-purple);
+        }
+        .back-link i {
+            width: 18px;
+            height: 18px;
+        }
+        .detail-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .detail-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .detail-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .detail-meta-item i {
+            width: 16px;
+            height: 16px;
+            color: var(--accent-blue);
+        }
+        .detail-section {
+            margin-bottom: 3rem;
+        }
+        .detail-section h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-purple);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .detail-section h2 i {
+            width: 20px;
+            height: 20px;
+        }
+        .detail-section p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .detail-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .detail-section li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .detail-section li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+        .highlight-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .highlight-box h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .result-item {
+            background: var(--bg-secondary);
+            padding: 1.25rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .result-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.25rem;
+        }
+        .result-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#research" class="back-link">
+        <i data-lucide="arrow-left"></i>
+        Back to Research
+    </a>
+
+    <div class="detail-hero">
+        <div class="detail-content">
+            <h1 class="detail-title">RTP Property Prediction with Equivariant Graph Neural Networks</h1>
+            <div class="detail-meta">
+                <div class="detail-meta-item">
+                    <i data-lucide="user"></i>
+                    Supervisor: Prof. Jun Jiang
+                </div>
+                <div class="detail-meta-item">
+                    <i data-lucide="calendar"></i>
+                    Fall 2025 - Spring 2026
+                </div>
+                <div class="detail-meta-item">
+                    <i data-lucide="tag"></i>
+                    Graduate Project
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail-content">
+        <div class="detail-section">
+            <h2><i data-lucide="file-text"></i> Overview</h2>
+            <p>This project focuses on predicting room-temperature phosphorescence (RTP) properties of organic molecules using state-of-the-art equivariant graph neural networks (EGNNs). RTP is a fascinating photophysical phenomenon with applications in organic electronics, bioimaging, and information encryption.</p>
+            <p>The challenge lies in accurately predicting key photophysical properties such as singlet oxygen quantum yield (Φ<sub>SO</sub>) and phosphorescence energy gap (ΔE<sub>ST</sub>), which are computationally expensive to obtain through traditional quantum mechanical methods.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="database"></i> Dataset</h2>
+            <p>We compiled a dataset of 6,000 RTP-active organic molecules with DFT-calculated photophysical properties:</p>
+            <ul>
+                <li>Singlet oxygen quantum yield (Φ<sub>SO</sub>)</li>
+                <li>Phosphorescence energy gap (ΔE<sub>ST</sub>)</li>
+                <li>Radiative and non-radiative decay rates</li>
+                <li>Molecular structures with optimized geometries</li>
+                <li>Electronic properties (HOMO/LUMO energies, band gaps)</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="layers"></i> Model Architecture</h2>
+            <p>We implemented an 8-layer EGNN_Sparse_Network with SE(3)-equivariant message passing, which preserves rotational symmetry throughout the network:</p>
+            <ul>
+                <li><strong>Node Features (21-dim):</strong> Atom type, hybridization state, aromaticity, valence electrons, etc.</li>
+                <li><strong>Edge Features (6-dim):</strong> Bond type, bond length, distance in molecular graph</li>
+                <li><strong>Message Passing:</strong> SE(3)-equivariant transformations on geometric tensors</li>
+                <li><strong>Output:</strong> Scalar properties predicted through invariant aggregation</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="settings"></i> Training Strategy</h2>
+            <ul>
+                <li><strong>Geometric Data Augmentation:</strong> Random rotations and translations of molecular coordinates</li>
+                <li><strong>Regularization:</strong> Layer-wise Dropout (0.1-0.3) to prevent overfitting</li>
+                <li><strong>Learning Rate Schedule:</strong> ReduceLROnPlateau with patience=10</li>
+                <li><strong>Loss Function:</strong> Mean Squared Error (MSE) with optional MAE</li>
+                <li><strong>Train/Val/Test Split:</strong> 70/15/15 with scaffold splitting</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h3><i data-lucide="trending-up"></i> Results</h3>
+            <div class="result-grid">
+                <div class="result-item">
+                    <div class="result-value">R² = 0.9855</div>
+                    <div class="result-label">SOC Prediction</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">R² = 0.8781</div>
+                    <div class="result-label">ΔE<sub>ST</sub> Prediction</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">MAE = 0.12</div>
+                    <div class="result-label">SOC (eV)</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">MAE = 0.08</div>
+                    <div class="result-label">ΔE<sub>ST</sub> (eV)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="lightbulb"></i> Key Insights</h2>
+            <ul>
+                <li>SE(3)-equivariance significantly improves prediction accuracy compared to invariant models</li>
+                <li>Geometric data augmentation helps the model generalize to unseen molecular scaffolds</li>
+                <li>The model captures subtle relationships between molecular geometry and electronic properties</li>
+                <li>Interpretability analysis reveals important structural motifs for RTP design</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="code"></i> Technologies Used</h2>
+            <div class="skill-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="skill-tag">PyTorch</span>
+                <span class="skill-tag">GNNs</span>
+                <span class="skill-tag">SE(3) Equivariance</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Deep Learning</span>
+                <span class="skill-tag">Computational Chemistry</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

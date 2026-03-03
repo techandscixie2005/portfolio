@@ -765,6 +765,190 @@ section {
 }
 
 /* ========================================
+   Teaching Section
+   ======================================== */
+#teaching {
+    background: var(--bg-secondary);
+}
+
+.teaching-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.teaching-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: var(--transition-medium);
+    display: flex;
+    flex-direction: column;
+}
+
+.teaching-card:hover {
+    border-color: var(--border-glow);
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+.teaching-card.upcoming {
+    opacity: 0.8;
+    border-style: dashed;
+}
+
+.teaching-header {
+    margin-bottom: 1.5rem;
+}
+
+.course-term {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    background: rgba(59, 130, 246, 0.15);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent-blue);
+    margin-bottom: 0.75rem;
+}
+
+.upcoming-badge {
+    display: inline-block;
+    padding: 0.35rem 0.75rem;
+    background: rgba(139, 92, 246, 0.15);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent-purple);
+    margin-left: 0.5rem;
+}
+
+.teaching-header h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.teaching-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.teaching-meta p {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.teaching-meta i {
+    width: 14px;
+    height: 14px;
+    color: var(--accent-blue);
+}
+
+.teaching-responsibilities {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+.teaching-responsibilities h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--accent-purple);
+    margin-bottom: 0.75rem;
+}
+
+.teaching-responsibilities h4 i {
+    width: 16px;
+    height: 16px;
+}
+
+.teaching-responsibilities ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.teaching-responsibilities li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.teaching-responsibilities li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+    font-weight: 600;
+}
+
+/* ========================================
+   Detail Links
+   ======================================== */
+.detail-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition-medium);
+    margin-top: auto;
+}
+
+.detail-link:hover {
+    background: var(--gradient-main);
+    border-color: transparent;
+    color: white;
+    transform: translateX(4px);
+}
+
+.detail-link i {
+    width: 16px;
+    height: 16px;
+    transition: var(--transition-medium);
+}
+
+.detail-link:hover i {
+    transform: translateX(4px);
+}
+
+.research-card .detail-link {
+    margin-top: 1.5rem;
+}
+
+.award-card {
+    position: relative;
+}
+
+.award-card .detail-link {
+    position: absolute;
+    bottom: 1.75rem;
+    right: 1.75rem;
+}
+
+/* ========================================
+   Awards Section
+
+/* ========================================
    Awards Section
    ======================================== */
 #awards {

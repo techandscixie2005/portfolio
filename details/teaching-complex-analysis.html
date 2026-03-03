@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complex Analysis (Fall 2024) | Xie Xiangyu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .detail-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: var(--bg-secondary);
+            padding: 6rem 2rem 4rem;
+        }
+        .detail-hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent-purple-glow) 0%, transparent 70%);
+            filter: blur(80px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .detail-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            transition: var(--transition-fast);
+        }
+        .back-link:hover {
+            color: var(--accent-purple);
+        }
+        .back-link i {
+            width: 18px;
+            height: 18px;
+        }
+        .detail-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .detail-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .detail-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .detail-meta-item i {
+            width: 16px;
+            height: 16px;
+            color: var(--accent-blue);
+        }
+        .detail-section {
+            margin-bottom: 3rem;
+        }
+        .detail-section h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-purple);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .detail-section h2 i {
+            width: 20px;
+            height: 20px;
+        }
+        .detail-section p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .detail-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .detail-section li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .detail-section li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+        .highlight-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .highlight-box h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        .course-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .info-item {
+            background: var(--bg-secondary);
+            padding: 1.25rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .info-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+        .info-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#teaching" class="back-link">
+        <i data-lucide="arrow-left"></i>
+        Back to Teaching
+    </a>
+
+    <div class="detail-hero">
+        <div class="detail-content">
+            <h1 class="detail-title">Complex Analysis (for Chemistry)</h1>
+            <div class="detail-meta">
+                <div class="detail-meta-item">
+                    <i data-lucide="calendar"></i>
+                    Fall 2024
+                </div>
+                <div class="detail-meta-item">
+                    <i data-lucide="book-open"></i>
+                    Required Course for Chemistry Majors
+                </div>
+                <div class="detail-meta-item">
+                    <i data-lucide="users"></i>
+                    ~105 students
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail-content">
+        <div class="detail-section">
+            <h2><i data-lucide="file-text"></i> Course Overview</h2>
+            <p>Complex Analysis (for Chemistry) is a required course for chemistry majors that introduces the fundamental concepts of complex numbers and complex functions. This course bridges the gap between elementary mathematics and advanced topics in theoretical chemistry, particularly quantum mechanics and spectroscopy.</p>
+            <p>As a teaching assistant, I was responsible for leading discussion sections, grading assignments, and providing one-on-one support to help students grasp challenging concepts such as complex integration, residue theorem, and conformal mapping.</p>
+        </div>
+
+        <div class="highlight-box">
+            <h3><i data-lucide="info"></i> Course Information</h3>
+            <div class="course-info-grid">
+                <div class="info-item">
+                    <div class="info-value">Fall 2024</div>
+                    <div class="info-label">Semester</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-value">~105</div>
+                    <div class="info-label">Students</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-value">2×45 min/week</div>
+                    <div class="info-label">Discussion Sections</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="check-circle"></i> Responsibilities</h2>
+            <ul>
+                <li><strong>Led weekly discussion sections</strong> (2×45 min/week) to reinforce lecture concepts</li>
+                <li><strong>Graded assignments</strong> including problem sets and quizzes, providing detailed feedback</li>
+                <li><strong>Provided one-on-one tutoring</strong> during office hours for students needing extra support</li>
+                <li><strong>Prepared supplementary problem sets</strong> to help students practice key concepts</li>
+                <li><strong>Helped students understand</strong> the connection between complex analysis and chemistry applications</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="book-open"></i> Topics Covered</h2>
+            <ul>
+                <li>Complex numbers and complex plane</li>
+                <li>Differentiation, the Cauchy-Riemann equation, and analytic functions</li>
+                <li>Integration, Cauchy's theorems and related results</li>
+                <li>Infinite series, Taylor series, and Laurent series</li>
+                <li>The residue theorem and its applications</li>
+                <li>Laplace transform</li>
+            </ul>
+
+        <div class="detail-section">
+            <h2><i data-lucide="lightbulb"></i> Teaching Approach</h2>
+            <p>I believe in making abstract mathematical concepts tangible through real-world examples and visual demonstrations. My approach includes:</p>
+            <ul>
+                <li><strong>Visual intuition:</strong> Using geometric interpretations of complex operations</li>
+                <li><strong>Chemistry connections:</strong> Linking complex analysis to quantum mechanics and spectroscopy</li>
+                <li><strong>Step-by-step problem solving:</strong> Breaking down complex problems into manageable steps</li>
+                <li><strong>Active learning:</strong> Encouraging student participation during discussion sections</li>
+                <li><strong>Individual support:</strong> Being available for one-on-one sessions to address specific challenges</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="star"></i> Key Takeaways</h2>
+            <ul>
+                <li>Developed strong communication skills for explaining abstract mathematical concepts</li>
+                <li>Learned to adapt teaching methods to different learning styles</li>
+                <li>Gained experience in mentoring and supporting undergraduate students</li>
+                <li>Deepened my own understanding of complex analysis through teaching</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

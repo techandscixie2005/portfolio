@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quantum Physics (Spring 2026) | Xie Xiangyu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .detail-hero {
+            min-height: 40vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: var(--bg-secondary);
+            padding: 6rem 2rem 4rem;
+        }
+        .detail-hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--accent-purple-glow) 0%, transparent 70%);
+            filter: blur(80px);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .detail-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            transition: var(--transition-fast);
+        }
+        .back-link:hover {
+            color: var(--accent-purple);
+        }
+        .back-link i {
+            width: 18px;
+            height: 18px;
+        }
+        .detail-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--gradient-main);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .detail-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .detail-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .detail-meta-item i {
+            width: 16px;
+            height: 16px;
+            color: var(--accent-blue);
+        }
+        .upcoming-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(139, 92, 246, 0.15);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-purple);
+            margin-bottom: 1rem;
+        }
+        .detail-section {
+            margin-bottom: 3rem;
+        }
+        .detail-section h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent-purple);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .detail-section h2 i {
+            width: 20px;
+            height: 20px;
+        }
+        .detail-section p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        .detail-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        .detail-section li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .detail-section li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+        .highlight-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-glow);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .highlight-box h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+        .course-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .info-item {
+            background: var(--bg-secondary);
+            padding: 1.25rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+        .info-value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+        .info-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html#teaching" class="back-link">
+        <i data-lucide="arrow-left"></i>
+        Back to Teaching
+    </a>
+
+    <div class="detail-hero">
+        <div class="detail-content">
+            <div class="upcoming-badge">
+                <i data-lucide="calendar"></i>
+                Upcoming - Spring 2026
+            </div>
+            <h1 class="detail-title">Quantum Physics</h1>
+            <div class="detail-meta">
+                <div class="detail-meta-item">
+                    <i data-lucide="calendar"></i>
+                    Spring 2026
+                </div>
+                <div class="detail-meta-item">
+                    <i data-lucide="book-open"></i>
+                    Core Physics Course
+                </div>
+                <div class="detail-meta-item">
+                    <i data-lucide="users"></i>
+                    ~16 students
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail-content">
+        <div class="detail-section">
+            <h2><i data-lucide="file-text"></i> Course Overview</h2>
+            <p>Quantum Physics is a core physics course that introduces students to the fundamental principles of quantum mechanics. This course covers the revolutionary concepts that form the foundation of modern physics, including wave-particle duality, the uncertainty principle, and quantum superposition.</p>
+            <p>I will be serving as a teaching assistant for this course, demonstrating strong command of theoretical foundations to help students navigate the conceptual and mathematical challenges of quantum mechanics.</p>
+        </div>
+
+        <div class="highlight-box">
+            <h3><i data-lucide="info"></i> Course Information</h3>
+            <div class="course-info-grid">
+                <div class="info-item">
+                    <div class="info-value">Spring 2026</div>
+                    <div class="info-label">Semester</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-value">~16</div>
+                    <div class="info-label">Students</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-value">Discussion Sections</div>
+                    <div class="info-label">Format</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="check-circle"></i> Responsibilities</h2>
+            <ul>
+                <li><strong>Demonstrating strong command</strong> of theoretical foundations in quantum mechanics</li>
+                <li><strong>Leading discussion sections</strong> on quantum mechanics concepts and problem-solving</li>
+                <li><strong>Grading problem sets and exams</strong> with detailed feedback</li>
+                <li><strong>Providing office hours</strong> for one-on-one support</li>
+                <li><strong>Helping students</strong> develop intuition for quantum phenomena</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="book-open"></i> Topics to Be Covered</h2>
+            <ul>
+                <li>Atomic models and old quantum theory</li>
+                <li>Quantum mechanics basics</li>
+                <li>Single electron atoms</li>
+                <li>Perturbation theory</li>
+                <li>Multi-electron atoms</li>
+                <li>Diatomic molecules</li>
+            </ul>
+
+        <div class="detail-section">
+            <h2><i data-lucide="lightbulb"></i> Teaching Approach</h2>
+            <p>My approach to teaching quantum mechanics focuses on building both mathematical proficiency and conceptual understanding:</p>
+            <ul>
+                <li><strong>Conceptual foundations:</strong> Ensuring students understand the physical meaning of quantum phenomena</li>
+                <li><strong>Mathematical rigor:</strong> Providing clear derivations and problem-solving techniques</li>
+                <li><strong>Physical intuition:</strong> Connecting mathematical results to physical understanding</li>
+                <li><strong>Interactive learning:</strong> Encouraging questions and discussion</li>
+                <li><strong>Historical context:</strong> Sharing the fascinating story of quantum mechanics development</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="star"></i> Preparation</h2>
+            <p>My strong background in quantum mechanics makes me well-prepared for this role:</p>
+            <ul>
+                <li><strong>Research experience:</strong> Working on RTP prediction using quantum chemistry methods</li>
+                <li><strong>Coursework:</strong> Completed advanced quantum mechanics courses</li>
+                <li><strong>Teaching experience:</strong> Previously taught Complex Analysis and Mathematical Physics Equations</li>
+                <li><strong>Mathematical foundation:</strong> Strong background in linear algebra, complex analysis, and PDEs</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
