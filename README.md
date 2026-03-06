@@ -16,10 +16,11 @@ Visit the portfolio at: [https://techandscixie2005.github.io/portfolio](https://
 ## Project Structure
 
 ```
-├── index.html          # Main portfolio page
-├── styles.css          # Custom CSS styling
-├── script.js           # JavaScript for interactivity
-├── details/            # Detailed project pages
+├── index.html                    # Main portfolio page
+├── styles.css                    # Custom CSS styling
+├── script.js                     # JavaScript for interactivity
+├── Xie_Xiangyu_Resume.tex        # LaTeX source for resume
+├── details/                      # Detailed project pages
 │   ├── research-egnn.html
 │   ├── research-doublet-emissive.html
 │   ├── research-chem-experiment.html
@@ -27,9 +28,7 @@ Visit the portfolio at: [https://techandscixie2005.github.io/portfolio](https://
 │   ├── teaching-math-physics.html
 │   ├── teaching-quantum.html
 │   └── award-scholarship.html
-├── docs/plans/         # Design and implementation documentation
-├── Xie_Xiangyu_Resume.pdf  # PDF resume version
-└── README.md           # This file
+└── README.md                     # This file
 ```
 
 ## Features
@@ -83,12 +82,12 @@ To customize the portfolio:
 
 ### Deployment
 
-Deploy to GitHub Pages:
+The site is deployed via GitHub Pages. To deploy:
 
 1. Push the repository to GitHub
 2. Go to Repository Settings → Pages
 3. Select the `main` branch as the source
-4. Your site will be available at `https://yourusername.github.io/portfolio`
+4. Your site will be available at `https://techandscixie2005.github.io/portfolio`
 
 ## Browser Support
 
