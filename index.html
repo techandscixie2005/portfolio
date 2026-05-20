@@ -146,7 +146,7 @@
                     <div class="card-details">
                         <div class="detail-item">
                             <h4><i data-lucide="database"></i> Dataset</h4>
-                            <p>6,000 RTP-active organic molecules with DFT-calculated photophysical properties</p>
+                            <p>About 6,000 organic RTP candidate molecules with quantum-chemistry excited-state property labels</p>
                         </div>
                         <div class="detail-item">
                             <h4><i data-lucide="layers"></i> Model</h4>
@@ -158,20 +158,23 @@
                         </div>
                         <div class="detail-item">
                             <h4><i data-lucide="settings"></i> Training</h4>
-                            <p>Geometric data augmentation, layer-wise Dropout, ReduceLROnPlateau</p>
+                            <p>Character-level SMILES Transformer baseline; same 4,800/1,050/150 train/validation/test split</p>
                         </div>
                     </div>
                     <div class="card-results">
                         <h4><i data-lucide="trending-up"></i> Results</h4>
                         <div class="result-badges">
-                            <span class="result-badge">R²=0.9855 (SOC)</span>
                             <span class="result-badge">R²=0.8781 (ΔE)</span>
+                            <span class="result-badge">R²=0.6263 (SOC T1→S1)</span>
+                            <span class="result-badge">R²=0.9855 (SOC T1→S0)</span>
+                            <span class="result-badge">R²=0.7844 (fosc)</span>
                         </div>
                     </div>
                     <div class="card-skills">
                         <span class="skill-tag">PyTorch</span>
                         <span class="skill-tag">GNNs</span>
                         <span class="skill-tag">SE(3) Equivariance</span>
+                        <span class="skill-tag">SMILES Transformer</span>
                         <span class="skill-tag">Python</span>
                     </div>
                     <a href="details/research-egnn.html" class="detail-link">

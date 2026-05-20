@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RTP Prediction with EGNN | Xie Xiangyu</title>
+    <title>RTP Molecular Property Prediction with EGNN | Xie Xiangyu</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -167,7 +167,7 @@
 
     <div class="detail-hero">
         <div class="detail-content">
-            <h1 class="detail-title">RTP Property Prediction with Equivariant Graph Neural Networks</h1>
+            <h1 class="detail-title">Prediction of Room-Temperature Phosphorescence Molecular Properties Based on Equivariant Graph Neural Networks</h1>
             <div class="detail-meta">
                 <div class="detail-meta-item">
                     <i data-lucide="user"></i>
@@ -188,19 +188,19 @@
     <div class="detail-content">
         <div class="detail-section">
             <h2><i data-lucide="file-text"></i> Overview</h2>
-            <p>This project focuses on predicting room-temperature phosphorescence (RTP) properties of organic molecules using state-of-the-art equivariant graph neural networks (EGNNs). RTP is a fascinating photophysical phenomenon with applications in organic electronics, bioimaging, and information encryption.</p>
-            <p>The challenge lies in accurately predicting key photophysical properties such as singlet oxygen quantum yield (Φ<sub>SO</sub>) and phosphorescence energy gap (ΔE<sub>ST</sub>), which are computationally expensive to obtain through traditional quantum mechanical methods.</p>
+            <p>This thesis focuses on predicting key excited-state properties of organic room-temperature phosphorescence (RTP) candidate molecules using equivariant graph neural networks (EGNNs). RTP is a photophysical phenomenon with applications in organic electronics, bioimaging, information security, and sensing.</p>
+            <p>The modeling scope is isolated-molecule property prediction: singlet-triplet energy gap, spin-orbit coupling strengths, and S1 oscillator strength. It does not directly predict final solid-state device performance, experimental quantum yield, or phosphorescence lifetime.</p>
         </div>
 
         <div class="detail-section">
             <h2><i data-lucide="database"></i> Dataset</h2>
-            <p>We compiled a dataset of 6,000 RTP-active organic molecules with DFT-calculated photophysical properties:</p>
+            <p>The thesis uses a dataset of about 6,000 organic RTP candidate molecules with quantum-chemistry labels:</p>
             <ul>
-                <li>Singlet oxygen quantum yield (Φ<sub>SO</sub>)</li>
-                <li>Phosphorescence energy gap (ΔE<sub>ST</sub>)</li>
-                <li>Radiative and non-radiative decay rates</li>
+                <li>Singlet-triplet energy gap ΔE(S1-T1)</li>
+                <li>Spin-orbit coupling SOC(T1→S1)</li>
+                <li>Spin-orbit coupling SOC(T1→S0)</li>
+                <li>S1 oscillator strength f<sub>osc,S1</sub></li>
                 <li>Molecular structures with optimized geometries</li>
-                <li>Electronic properties (HOMO/LUMO energies, band gaps)</li>
             </ul>
         </div>
 
@@ -210,7 +210,7 @@
             <ul>
                 <li><strong>Node Features (21-dim):</strong> Atom type, hybridization state, aromaticity, valence electrons, etc.</li>
                 <li><strong>Edge Features (6-dim):</strong> Bond type, bond length, distance in molecular graph</li>
-                <li><strong>Message Passing:</strong> SE(3)-equivariant transformations on geometric tensors</li>
+                <li><strong>Message Passing:</strong> Equivariant updates using molecular topology, edge attributes, and 3D coordinates</li>
                 <li><strong>Output:</strong> Scalar properties predicted through invariant aggregation</li>
             </ul>
         </div>
@@ -219,10 +219,10 @@
             <h2><i data-lucide="settings"></i> Training Strategy</h2>
             <ul>
                 <li><strong>Geometric Data Augmentation:</strong> Random rotations and translations of molecular coordinates</li>
-                <li><strong>Regularization:</strong> Layer-wise Dropout (0.1-0.3) to prevent overfitting</li>
-                <li><strong>Learning Rate Schedule:</strong> ReduceLROnPlateau with patience=10</li>
-                <li><strong>Loss Function:</strong> Mean Squared Error (MSE) with optional MAE</li>
-                <li><strong>Train/Val/Test Split:</strong> 70/15/15 with scaffold splitting</li>
+                <li><strong>Regularization:</strong> Layer-wise Dropout with a gradually increasing rate</li>
+                <li><strong>Learning Rate Schedule:</strong> ReduceLROnPlateau scheduling</li>
+                <li><strong>Baseline:</strong> Character-level SMILES Transformer trained on the same molecules</li>
+                <li><strong>Train/Val/Test Split:</strong> 4,800 / 1,050 / 150 molecules with a fixed split shared by EGNN and Transformer</li>
             </ul>
         </div>
 
@@ -230,20 +230,20 @@
             <h3><i data-lucide="trending-up"></i> Results</h3>
             <div class="result-grid">
                 <div class="result-item">
-                    <div class="result-value">R² = 0.9855</div>
-                    <div class="result-label">SOC Prediction</div>
-                </div>
-                <div class="result-item">
                     <div class="result-value">R² = 0.8781</div>
-                    <div class="result-label">ΔE<sub>ST</sub> Prediction</div>
+                    <div class="result-label">ΔE(S1-T1)</div>
                 </div>
                 <div class="result-item">
-                    <div class="result-value">MAE = 0.12</div>
-                    <div class="result-label">SOC (eV)</div>
+                    <div class="result-value">R² = 0.6263</div>
+                    <div class="result-label">SOC(T1→S1)</div>
                 </div>
                 <div class="result-item">
-                    <div class="result-value">MAE = 0.08</div>
-                    <div class="result-label">ΔE<sub>ST</sub> (eV)</div>
+                    <div class="result-value">R² = 0.9855</div>
+                    <div class="result-label">SOC(T1→S0)</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-value">R² = 0.7844</div>
+                    <div class="result-label">f<sub>osc,S1</sub></div>
                 </div>
             </div>
         </div>
@@ -251,10 +251,10 @@
         <div class="detail-section">
             <h2><i data-lucide="lightbulb"></i> Key Insights</h2>
             <ul>
-                <li>SE(3)-equivariance significantly improves prediction accuracy compared to invariant models</li>
-                <li>Geometric data augmentation helps the model generalize to unseen molecular scaffolds</li>
-                <li>The model captures subtle relationships between molecular geometry and electronic properties</li>
-                <li>Interpretability analysis reveals important structural motifs for RTP design</li>
+                <li>Explicit 3D geometry and equivariant inductive bias improved prediction over the sequence baseline across all four targets</li>
+                <li>SOC(T1→S0) was predicted most accurately, while SOC(T1→S1) remained the most challenging target</li>
+                <li>Results support using 3D molecular graphs for RTP-related excited-state property screening at the isolated-molecule level</li>
+                <li>The conclusions should not be interpreted as direct predictions of solid-state RTP performance, quantum yield, or lifetime</li>
             </ul>
         </div>
 
@@ -264,6 +264,7 @@
                 <span class="skill-tag">PyTorch</span>
                 <span class="skill-tag">GNNs</span>
                 <span class="skill-tag">SE(3) Equivariance</span>
+                <span class="skill-tag">SMILES Transformer</span>
                 <span class="skill-tag">Python</span>
                 <span class="skill-tag">Deep Learning</span>
                 <span class="skill-tag">Computational Chemistry</span>
