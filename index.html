@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xie Xiangyu | Chemical Physics @ USTC</title>
+    <title>Xie Xiangyu | Chemical Physics × Geometric Deep Learning × AI for Science</title>
+    <meta name="description" content="Xie Xiangyu (谢翔宇) — AI-for-Science researcher at USTC. Chemical Physics, geometry-aware molecular machine learning, equivariant GNNs, computational chemistry, spectroscopy.">
+    <meta property="og:title" content="Xie Xiangyu — AI-for-Science Portfolio">
+    <meta property="og:description" content="Chemical Physics × Geometric Deep Learning × AI for Science. Undergraduate researcher building geometry-aware models for molecular properties, spectra, and quantum chemistry.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://techandscixie2005.github.io/portfolio/">
+    <meta name="twitter:card" content="summary">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,11 +22,11 @@
         <div class="nav-container">
             <a href="#hero" class="nav-logo">Xie Xiangyu</a>
             <ul class="nav-links">
-                <li><a href="#education">Education</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#focus">Focus</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#teaching">Teaching</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="nav-toggle" aria-label="Toggle navigation">
@@ -31,92 +37,418 @@
 
     <!-- Hero Section -->
     <section id="hero">
-        <div class="hero-background">
-            <div class="hero-gradient"></div>
-            <div class="hero-grid"></div>
-        </div>
+        <div class="hero-grid"></div>
         <div class="hero-content">
-            <h1 class="hero-name">
-                <span class="name-cn">谢翔宇</span>
-                <span class="name-en">Xie Xiangyu</span>
+            <p class="hero-badge">AI for Science &middot; Internship Application</p>
+            <h1>
+                <span class="hero-name-cn">谢翔宇</span>
+                <span class="hero-name-en">Xie Xiangyu</span>
             </h1>
-            <p class="hero-title">Chemical Physics Student @ USTC</p>
-            <p class="hero-subtitle">
-                <i data-lucide="brain"></i>
-                AI for Science
-                <span class="divider">|</span>
-                <i data-lucide="network"></i>
-                Graph Neural Networks
-                <span class="divider">|</span>
-                <i data-lucide="flask-conical"></i>
-                Computational Chemistry
+            <p class="hero-affiliation">Chemical Physics &middot; University of Science and Technology of China</p>
+            <p class="hero-headline">
+                AI-for-Science researcher building <strong>geometry-aware models</strong> for molecular properties, spectra, and quantum chemistry — at the intersection of equivariant deep learning and computational chemistry.
             </p>
-            <a href="mailto:xxy220348@mail.ustc.edu.cn" class="hero-contact">
-                <i data-lucide="mail"></i>
-                xxy220348@mail.ustc.edu.cn
-            </a>
+            <div class="hero-tags">
+                <span class="hero-tag">AI for Science</span>
+                <span class="hero-tag">Geometric Deep Learning</span>
+                <span class="hero-tag">Molecular Machine Learning</span>
+                <span class="hero-tag">Computational Chemistry</span>
+                <span class="hero-tag">Spectroscopy</span>
+                <span class="hero-tag">Photophysics</span>
+            </div>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">
+                    <i data-lucide="microscope"></i> View Research Projects
+                </a>
+                <a href="Xie_Xiangyu_Resume.pdf" class="btn-secondary">
+                    <i data-lucide="file-text"></i> Download Resume
+                </a>
+                <a href="https://github.com/techandscixie2005" class="btn-secondary">
+                    <i data-lucide="github"></i> GitHub
+                </a>
+                <a href="mailto:xxy220348@mail.ustc.edu.cn" class="btn-ghost">
+                    <i data-lucide="mail"></i> Email
+                </a>
+            </div>
         </div>
-        <a href="#education" class="scroll-indicator">
+        <a href="#focus" class="scroll-indicator" aria-label="Scroll to content">
             <i data-lucide="chevron-down"></i>
         </a>
+    </section>
+
+    <!-- Research Focus Section -->
+    <section id="focus">
+        <div class="container">
+            <span class="section-label">Research Direction</span>
+            <h2 class="section-title">What I Work On</h2>
+            <p class="section-subtitle">Three interconnected research directions bridging molecular science and geometric deep learning.</p>
+            <div class="focus-grid">
+                <!-- Focus Card A -->
+                <div class="focus-card card-geometry">
+                    <div class="focus-icon">
+                        <i data-lucide="network"></i>
+                    </div>
+                    <h3>Geometry-aware Molecular Learning</h3>
+                    <p>Building models that respect the 3D geometry of molecules. Using equivariant graph neural networks to predict molecular properties from atomic coordinates, with SE(3)-equivariant inductive bias built into the architecture.</p>
+                    <div class="focus-keywords">
+                        <span class="focus-keyword">Molecular Graphs</span>
+                        <span class="focus-keyword">3D Coordinates</span>
+                        <span class="focus-keyword">EGNN</span>
+                        <span class="focus-keyword">SE(3) Equivariance</span>
+                        <span class="focus-keyword">Tensor Field Network</span>
+                        <span class="focus-keyword">SE(3)-Transformer</span>
+                        <span class="focus-keyword">Geometric Inductive Bias</span>
+                    </div>
+                </div>
+
+                <!-- Focus Card B -->
+                <div class="focus-card card-spectra">
+                    <div class="focus-icon">
+                        <i data-lucide="waveform"></i>
+                    </div>
+                    <h3>Spectra-to-Structure &amp; Multimodal Representation</h3>
+                    <p>Connecting spectroscopic evidence to molecular geometry. Designing coordinate-aware spectral encoders with distance-bias attention, cross-modal fusion, and retrieval-based candidate ranking for molecular structure inference.</p>
+                    <div class="focus-keywords">
+                        <span class="focus-keyword">IR / Raman / NMR / MS</span>
+                        <span class="focus-keyword">Coordinate-aware Encoders</span>
+                        <span class="focus-keyword">Distance-bias Attention</span>
+                        <span class="focus-keyword">Cross-modal Fusion</span>
+                        <span class="focus-keyword">Retrieval &amp; Reranking</span>
+                        <span class="focus-keyword">Generative Molecular Geometry</span>
+                    </div>
+                </div>
+
+                <!-- Focus Card C -->
+                <div class="focus-card card-quantum">
+                    <div class="focus-icon">
+                        <i data-lucide="atom"></i>
+                    </div>
+                    <h3>Quantum Chemistry &amp; Photophysics</h3>
+                    <p>Predicting excited-state properties of organic molecules using computational chemistry and machine learning. Focusing on room-temperature phosphorescence, spin-orbit coupling, oscillator strengths, and DFT/TD-DFT based property labels.</p>
+                    <div class="focus-keywords">
+                        <span class="focus-keyword">RTP</span>
+                        <span class="focus-keyword">Singlet-Triplet Gap</span>
+                        <span class="focus-keyword">Spin-Orbit Coupling</span>
+                        <span class="focus-keyword">Oscillator Strength</span>
+                        <span class="focus-keyword">DFT / TD-DFT</span>
+                        <span class="focus-keyword">Molecular Property Prediction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <span class="section-label">Featured Work</span>
+            <h2 class="section-title">Research Projects</h2>
+            <p class="section-subtitle">Concrete projects demonstrating research engineering ability across computational chemistry and geometric deep learning.</p>
+
+            <div class="project-grid">
+                <!-- Project 1: EGNN RTP -->
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <h3>Equivariant Graph Neural Networks for Room-Temperature Phosphorescence Property Prediction</h3>
+                        <span class="project-badge badge-thesis">Bachelor Thesis</span>
+                    </div>
+                    <div class="project-meta">
+                        <span class="project-meta-item"><i data-lucide="user"></i> Supervisor: Prof. Jun Jiang</span>
+                        <span class="project-meta-item"><i data-lucide="calendar"></i> Fall 2025 – Spring 2026</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-body-col">
+                            <h4>Problem</h4>
+                            <p>Predict key excited-state properties of organic RTP molecules — ΔE(S₁−T₁), spin-orbit coupling, and oscillator strength — from molecular structure alone, using 3D geometric information rather than 1D sequence representations.</p>
+                        </div>
+                        <div class="project-body-col">
+                            <h4>Method</h4>
+                            <ul>
+                                <li>8-layer EGNN_Sparse_Network with SE(3)-equivariant message passing</li>
+                                <li>21-dim atom node features, 6-dim bond edge features, explicit 3D coordinates</li>
+                                <li>Character-level SMILES Transformer baseline for comparison</li>
+                                <li>Rotation/translation augmentation during training</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-results">
+                        <h4>Results (Test-set R², ~6,000 molecules)</h4>
+                        <div class="result-metrics">
+                            <div class="result-metric"><span class="value">0.8781</span><span class="label">ΔE(S₁−T₁)</span></div>
+                            <div class="result-metric"><span class="value">0.6263</span><span class="label">SOC(T₁→S₁)</span></div>
+                            <div class="result-metric"><span class="value">0.9855</span><span class="label">SOC(T₁→S₀)</span></div>
+                            <div class="result-metric"><span class="value">0.7844</span><span class="label">f<sub>osc,S₁</sub></span></div>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">EGNN</span>
+                        <span class="tag">SE(3) Equivariance</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag tag-purple">Computational Chemistry</span>
+                        <span class="tag tag-purple">Photophysics</span>
+                    </div>
+                    <div class="project-footer">
+                        <a href="details/research-egnn.html" class="detail-link">
+                            <span>Full project details</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 2: MultiSpec-GeoDiff -->
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <h3>MultiSpec-GeoDiff: Geometry-Constrained Multimodal Spectra-to-Structure Retrieval</h3>
+                        <span class="project-badge badge-demo">Research Demo</span>
+                    </div>
+                    <div class="project-meta">
+                        <span class="project-meta-item"><i data-lucide="calendar"></i> 2025 – 2026</span>
+                        <span class="project-meta-item"><i data-lucide="info"></i> Prototype / Research Proposal</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-body-col">
+                            <h4>Problem</h4>
+                            <p>Infer plausible molecular structural candidates from multimodal spectroscopic evidence (IR, Raman, NMR, MS). This is an inverse problem: given spectra, recover the geometry-consistent molecular structure.</p>
+                        </div>
+                        <div class="project-body-col">
+                            <h4>Method</h4>
+                            <ul>
+                                <li>Coordinate-aware spectral encoder with intra-modal attention and spectral coordinate bias</li>
+                                <li>Cross-modal fusion across multiple spectroscopic modalities</li>
+                                <li>Candidate retrieval and reranking pipeline with forward physical validation</li>
+                                <li>Path toward geometric generative extension (GeoDiff-style) for structure proposal</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag">Spectroscopy</span>
+                        <span class="tag">Molecular Representation</span>
+                        <span class="tag tag-cyan">Attention</span>
+                        <span class="tag tag-cyan">Retrieval</span>
+                        <span class="tag tag-purple">Geometry-aware</span>
+                    </div>
+                    <div class="project-footer">
+                        <span class="project-note">Research prototype — active development</span>
+                    </div>
+                </article>
+
+                <!-- Project 3: Doublet-Emissive -->
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <h3>Doublet-Emissive Molecular Design and Synthesis</h3>
+                        <span class="project-badge badge-research">Undergraduate Research</span>
+                    </div>
+                    <div class="project-meta">
+                        <span class="project-meta-item"><i data-lucide="user"></i> Supervisor: Prof. Linsong Cui</span>
+                        <span class="project-meta-item"><i data-lucide="calendar"></i> Fall 2023 – Fall 2024</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-body-col">
+                            <h4>Problem</h4>
+                            <p>Design and synthesize novel doublet-emissive organic light-emitting materials. TTM-based radicals show strong doublet emission but limited tunability — can acceptor functionalization redshift emission while preserving quantum yield?</p>
+                        </div>
+                        <div class="project-body-col">
+                            <h4>Method</h4>
+                            <ul>
+                                <li>Designed TTM-AnQ radical: TTM donor coupled with 9,10-anthraquinone acceptor</li>
+                                <li>Multi-step synthesis: Friedel–Crafts, Suzuki coupling, oxidation</li>
+                                <li>Characterization: UV-Vis, fluorescence, CV, transient fluorescence</li>
+                                <li>First systematic study of acceptor-functionalized radical emitters</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-results">
+                        <h4>Key Findings</h4>
+                        <div class="result-metrics">
+                            <div class="result-metric"><span class="value">580 → 695 nm</span><span class="label">Emission Redshift</span></div>
+                            <div class="result-metric"><span class="value">−2.82 → −3.18 eV</span><span class="label">SOMO Modulation</span></div>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag tag-purple">Organic Synthesis</span>
+                        <span class="tag tag-purple">Photophysics</span>
+                        <span class="tag tag-purple">Molecular Design</span>
+                        <span class="tag">Spectroscopy</span>
+                    </div>
+                    <div class="project-footer">
+                        <a href="details/research-doublet-emissive.html" class="detail-link">
+                            <span>Full project details</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 4: MD Simulation for Teaching -->
+                <article class="project-card">
+                    <div class="project-card-header">
+                        <h3>Multiscale Molecular Simulation for Physical Chemistry Teaching Innovation</h3>
+                        <span class="project-badge badge-competition">Competition &middot; First Prize</span>
+                    </div>
+                    <div class="project-meta">
+                        <span class="project-meta-item"><i data-lucide="calendar"></i> Fall 2024 – Spring 2025</span>
+                        <span class="project-meta-item"><i data-lucide="award"></i> Central China Division, Digital Intelligence Track</span>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-body-col">
+                            <h4>Problem</h4>
+                            <p>Bridge the gap between theoretical physical chemistry and experimental laboratory practice. Use MD and DFT simulations to reveal the microscopic origin of the infinite dilution extrapolation method for dipole moment measurement.</p>
+                        </div>
+                        <div class="project-body-col">
+                            <h4>Method</h4>
+                            <ul>
+                                <li>MD simulations (GROMACS) for n-butanol/cyclohexane solution-phase behavior</li>
+                                <li>DFT calculations (Gaussian 16, B3LYP/6-31G+g(d,p)) for electronic properties</li>
+                                <li>100 trajectory frames extracted for DFT dipole moment computation</li>
+                                <li>Experimental validation against measured dipole moments</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-results">
+                        <h4>Results</h4>
+                        <div class="result-metrics">
+                            <div class="result-metric"><span class="value">1.78 D</span><span class="label">Predicted Dipole</span></div>
+                            <div class="result-metric"><span class="value">1.66 D</span><span class="label">Experimental</span></div>
+                            <div class="result-metric"><span class="value">6.0%</span><span class="label">Deviation</span></div>
+                        </div>
+                    </div>
+                    <div class="project-tags">
+                        <span class="tag tag-green">Molecular Dynamics</span>
+                        <span class="tag tag-green">DFT</span>
+                        <span class="tag">GROMACS</span>
+                        <span class="tag">Gaussian</span>
+                        <span class="tag">Scientific Computing</span>
+                    </div>
+                    <div class="project-footer">
+                        <a href="details/research-chem-experiment.html" class="detail-link">
+                            <span>Full project details</span>
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <span class="section-label">Capabilities</span>
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-subtitle">Tools and techniques I use for AI-for-Science research and engineering.</p>
+            <div class="skills-grid">
+                <!-- ML & Scientific ML -->
+                <div class="skill-category">
+                    <h3><i data-lucide="brain-circuit"></i> Machine Learning &amp; Scientific ML</h3>
+                    <div class="skill-list">
+                        <span class="skill-item primary">PyTorch</span>
+                        <span class="skill-item primary">Graph Neural Networks</span>
+                        <span class="skill-item primary">Equivariant GNNs</span>
+                        <span class="skill-item">EGNN</span>
+                        <span class="skill-item">Tensor Field Network</span>
+                        <span class="skill-item">SE(3)-Transformer</span>
+                        <span class="skill-item">Transformer Architectures</span>
+                        <span class="skill-item">Molecular Property Prediction</span>
+                        <span class="skill-item">Model Prototyping &amp; Evaluation</span>
+                    </div>
+                </div>
+
+                <!-- AI-assisted Research Engineering -->
+                <div class="skill-category">
+                    <h3><i data-lucide="bot"></i> AI-assisted Research Engineering</h3>
+                    <div class="skill-list">
+                        <span class="skill-item primary">Claude Code</span>
+                        <span class="skill-item primary">Cursor</span>
+                        <span class="skill-item">Codex</span>
+                        <span class="skill-item">OpenCode</span>
+                        <span class="skill-item">GitHub-based Research Workflow</span>
+                        <span class="skill-item">Prompt-driven Codebase Refactoring</span>
+                        <span class="skill-item">Scientific Demo Construction</span>
+                    </div>
+                </div>
+
+                <!-- Computational Chemistry -->
+                <div class="skill-category">
+                    <h3><i data-lucide="flask-conical"></i> Computational Chemistry</h3>
+                    <div class="skill-list">
+                        <span class="skill-item primary">DFT / TD-DFT</span>
+                        <span class="skill-item">Gaussian</span>
+                        <span class="skill-item">VASP</span>
+                        <span class="skill-item">GROMACS</span>
+                        <span class="skill-item">Molecular Visualization</span>
+                        <span class="skill-item">Photophysical Property Analysis</span>
+                    </div>
+                </div>
+
+                <!-- Mathematics & Physics -->
+                <div class="skill-category">
+                    <h3><i data-lucide="sigma"></i> Mathematics &amp; Physics</h3>
+                    <div class="skill-list">
+                        <span class="skill-item primary">Advanced Quantum Mechanics</span>
+                        <span class="skill-item primary">Quantum Chemistry</span>
+                        <span class="skill-item">Group Theory</span>
+                        <span class="skill-item">Linear Algebra</span>
+                        <span class="skill-item">Probability &amp; Statistics</span>
+                        <span class="skill-item">Complex Functions</span>
+                        <span class="skill-item">Mathematical Physics Equations</span>
+                    </div>
+                </div>
+
+                <!-- General Tools -->
+                <div class="skill-category">
+                    <h3><i data-lucide="wrench"></i> General Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-item primary">Python</span>
+                        <span class="skill-item">LaTeX</span>
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">Linux/Unix</span>
+                        <span class="skill-item">NumPy / Pandas / Matplotlib</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Education Section -->
     <section id="education">
         <div class="container">
-            <h2 class="section-title">
-                <i data-lucide="graduation-cap"></i>
-                Education
-            </h2>
+            <span class="section-label">Background</span>
+            <h2 class="section-title">Education</h2>
             <div class="education-card">
                 <div class="education-header">
-                    <div class="university-info">
+                    <div>
                         <h3>University of Science and Technology of China</h3>
                         <p class="location"><i data-lucide="map-pin"></i> Hefei, China</p>
                     </div>
                     <div class="degree-badge">
                         <span class="degree">B.S. in Chemical Physics</span>
-                        <span class="class-year">Class of 2026</span>
+                        <span class="year">Class of 2026</span>
                     </div>
                 </div>
                 <div class="education-details">
-                    <div class="gpa-section">
-                        <div class="gpa-main">
-                            <span class="gpa-value">GPA: 3.23/4.3</span>
-                            <span class="gpa-rank">Rank: 56/116</span>
-                        </div>
-                        <div class="gpa-trajectory">
-                            <div class="trajectory-item">
-                                <span class="year">Freshman</span>
-                                <div class="bar"><div class="fill" style="width: 60%"></div></div>
-                                <span class="value">2.6</span>
-                            </div>
-                            <div class="trajectory-item">
-                                <span class="year">Sophomore</span>
-                                <div class="bar"><div class="fill" style="width: 79%"></div></div>
-                                <span class="value">3.4</span>
-                            </div>
-                            <div class="trajectory-item">
-                                <span class="year">Junior</span>
-                                <div class="bar"><div class="fill" style="width: 81%"></div></div>
-                                <span class="value">3.5</span>
-                            </div>
-                        </div>
+                    <div class="gpa-trajectory-compact">
+                        <p class="gpa-current">GPA: 3.23 / 4.3</p>
+                        <p class="gpa-trend">
+                            Academic trajectory:
+                            <span>Freshman 2.6</span>
+                            <span class="trend-up">→</span>
+                            <span>Sophomore 3.4</span>
+                            <span class="trend-up">→</span>
+                            <span>Junior 3.5</span>
+                        </p>
                     </div>
-                    <div class="advisor-section">
-                        <h4><i data-lucide="user"></i> Advisor</h4>
+                    <div class="advisor-info">
+                        <h4>Advisor</h4>
                         <p>Prof. Jun Jiang</p>
-                        <span class="advisor-field">Computational Chemistry & AI for Science</span>
+                        <p class="field">Computational Chemistry &amp; AI for Science</p>
                     </div>
                 </div>
                 <div class="coursework">
-                    <h4><i data-lucide="book-open"></i> Key Coursework</h4>
+                    <h4>Key Coursework</h4>
                     <div class="course-tags">
-                        <span class="course-tag">Quantum Mechanics</span>
+                        <span class="course-tag">Advanced Quantum Mechanics</span>
+                        <span class="course-tag">Quantum Chemistry</span>
                         <span class="course-tag">Statistical Mechanics</span>
                         <span class="course-tag">Mathematical Physics Equations</span>
-                        <span class="course-tag">Machine Learning Fundamentals</span>
-                        <span class="course-tag">Computational Chemistry</span>
                         <span class="course-tag">Group Theory</span>
                         <span class="course-tag">Linear Algebra</span>
                     </div>
@@ -125,143 +457,77 @@
         </div>
     </section>
 
-    <!-- Research Section -->
-    <section id="research">
+    <!-- Teaching Section -->
+    <section id="teaching">
         <div class="container">
-            <h2 class="section-title">
-                <i data-lucide="microscope"></i>
-                Research Experience
-            </h2>
-            <div class="research-grid">
-                <!-- Project 1 -->
-                <article class="research-card project-1">
-                    <div class="card-header">
-                        <span class="project-type">Graduate Project</span>
-                        <h3>Prediction of Room-Temperature Phosphorescence Molecular Properties Based on Equivariant Graph Neural Networks</h3>
+            <span class="section-label">Teaching</span>
+            <h2 class="section-title">Teaching Experience</h2>
+            <p class="section-subtitle">Teaching assistant roles strengthening my ability to communicate complex scientific concepts.</p>
+            <div class="teaching-grid">
+                <!-- Quantum Physics (most relevant) -->
+                <article class="teaching-card">
+                    <div class="teaching-term">Spring 2026</div>
+                    <span class="upcoming-badge">Current</span>
+                    <h3>Quantum Physics</h3>
+                    <div class="teaching-meta">
+                        <p><i data-lucide="book-open"></i> Core Physics Course</p>
+                        <p><i data-lucide="users"></i> ~16 students</p>
                     </div>
-                    <div class="card-meta">
-                        <p><i data-lucide="user"></i> Supervisor: Prof. Jun Jiang</p>
-                        <p><i data-lucide="calendar"></i> Fall 2025 - Spring 2026</p>
+                    <div class="teaching-responsibilities">
+                        <h4>Focus</h4>
+                        <ul>
+                            <li>Leading discussion sections on quantum mechanics foundations</li>
+                            <li>Mathematical derivations and LaTeX solution writing</li>
+                            <li>Problem-solving support and office hours</li>
+                            <li>Communicating abstract physics concepts clearly</li>
+                        </ul>
                     </div>
-                    <div class="card-details">
-                        <div class="detail-item">
-                            <h4><i data-lucide="database"></i> Dataset</h4>
-                            <p>About 6,000 organic RTP candidate molecules with quantum-chemistry excited-state property labels</p>
-                        </div>
-                        <div class="detail-item">
-                            <h4><i data-lucide="layers"></i> Model</h4>
-                            <p>8-layer EGNN_Sparse_Network with SE(3)-equivariant message passing</p>
-                        </div>
-                        <div class="detail-item">
-                            <h4><i data-lucide="box"></i> Features</h4>
-                            <p>21-dim node features (atom type, hybridization, aromaticity), 6-dim edge features</p>
-                        </div>
-                        <div class="detail-item">
-                            <h4><i data-lucide="settings"></i> Training</h4>
-                            <p>Character-level SMILES Transformer baseline; same 4,800/1,050/150 train/validation/test split</p>
-                        </div>
-                    </div>
-                    <div class="card-results">
-                        <h4><i data-lucide="trending-up"></i> Results</h4>
-                        <div class="result-badges">
-                            <span class="result-badge">R²=0.8781 (ΔE)</span>
-                            <span class="result-badge">R²=0.6263 (SOC T1→S1)</span>
-                            <span class="result-badge">R²=0.9855 (SOC T1→S0)</span>
-                            <span class="result-badge">R²=0.7844 (fosc)</span>
-                        </div>
-                    </div>
-                    <div class="card-skills">
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">GNNs</span>
-                        <span class="skill-tag">SE(3) Equivariance</span>
-                        <span class="skill-tag">SMILES Transformer</span>
-                        <span class="skill-tag">Python</span>
-                    </div>
-                    <a href="details/research-egnn.html" class="detail-link">
-                        <span>Learn more</span>
+                    <a href="details/teaching-quantum.html" class="detail-link">
+                        <span>Details</span>
                         <i data-lucide="arrow-right"></i>
                     </a>
                 </article>
 
-                <!-- Project 2 -->
-                <article class="research-card project-2">
-                    <div class="card-header">
-                        <span class="project-type">Undergraduate Research</span>
-                        <h3>Design and Synthesis of Light-Emitting Materials Based on Doublet-Emissive Mechanism</h3>
+                <!-- Math Physics Equations -->
+                <article class="teaching-card">
+                    <div class="teaching-term">Spring 2025</div>
+                    <h3>Mathematical Physics Equations (B)</h3>
+                    <div class="teaching-meta">
+                        <p><i data-lucide="book-open"></i> Core Physics Course</p>
+                        <p><i data-lucide="users"></i> ~115 students</p>
                     </div>
-                    <div class="card-meta">
-                        <p><i data-lucide="user"></i> Supervisor: Prof. Linsong Cui</p>
-                        <p><i data-lucide="calendar"></i> Fall 2023 - Fall 2024</p>
+                    <div class="teaching-responsibilities">
+                        <h4>Focus</h4>
+                        <ul>
+                            <li>Facilitated problem-solving sessions for PDEs and special functions</li>
+                            <li>Developed supplementary materials</li>
+                            <li>Held regular office hours</li>
+                        </ul>
                     </div>
-                    <div class="card-details">
-                        <div class="detail-item">
-                            <h4><i data-lucide="flask-conical"></i> Synthesis</h4>
-                            <p>Designed TTM-AnQ radical by coupling TTM radical with 9,10-anthraquinone</p>
-                        </div>
-                        <div class="detail-item">
-                            <h4><i data-lucide="workflow"></i> Methods</h4>
-                            <p>Multi-step synthesis: Friedel–Crafts, Suzuki coupling, oxidation</p>
-                        </div>
-                        <div class="detail-item">
-                            <h4><i data-lucide="scan-eye"></i> Characterization</h4>
-                            <p>UV-Vis, fluorescence, CV, transient fluorescence</p>
-                        </div>
-                    </div>
-                    <div class="card-results">
-                        <h4><i data-lucide="trending-up"></i> Results</h4>
-                        <div class="result-badges">
-                            <span class="result-badge">Emission: 580nm → 695nm</span>
-                            <span class="result-badge highlight">SOMO: -2.82eV → -3.18eV</span>
-                        </div>
-                    </div>
-                    <div class="card-skills">
-                        <span class="skill-tag">Organic Synthesis</span>
-                        <span class="skill-tag">Characterization</span>
-                        <span class="skill-tag">Materials Science</span>
-                    </div>
-                    <a href="details/research-doublet-emissive.html" class="detail-link">
-                        <span>Learn more</span>
+                    <a href="details/teaching-math-physics.html" class="detail-link">
+                        <span>Details</span>
                         <i data-lucide="arrow-right"></i>
                     </a>
                 </article>
 
-                <!-- Project 3 -->
-                <article class="research-card project-3">
-                    <div class="card-header">
-                        <span class="project-type">Competition</span>
-                        <h3>Multiscale Molecular Simulation-Driven Physical Chemistry Experiment Teaching Innovation</h3>
+                <!-- Complex Functions -->
+                <article class="teaching-card">
+                    <div class="teaching-term">Fall 2024</div>
+                    <h3>Complex Functions (for Chemistry)</h3>
+                    <div class="teaching-meta">
+                        <p><i data-lucide="book-open"></i> Required for Chemistry Majors</p>
+                        <p><i data-lucide="users"></i> ~105 students</p>
                     </div>
-                    <div class="card-meta">
-                        <p><i data-lucide="calendar"></i> Fall 2024 - Spring 2025</p>
+                    <div class="teaching-responsibilities">
+                        <h4>Focus</h4>
+                        <ul>
+                            <li>Led weekly discussion sections (2×45 min/week)</li>
+                            <li>Graded assignments with detailed feedback</li>
+                            <li>Provided one-on-one tutoring</li>
+                        </ul>
                     </div>
-                    <div class="card-details">
-                        <div class="detail-item">
-                            <h4><i data-lucide="git-branch"></i> Framework</h4>
-                            <p>MD simulations (GROMACS) + DFT calculations (Gaussian 16, B3LYP/6-31G+g(d,p))</p>
-                        </div>
-                        <div class="detail-item">
-                            <i data-lucide="atom"></i> Models
-                            <p>Built n-butanol/cyclohexane models (17:400 and 1:400)</p>
-                        </div>
-                    </div>
-                    <div class="card-results">
-                        <h4><i data-lucide="award"></i> Award</h4>
-                        <p class="award-text">First Prize, Central China Division</p>
-                        <p class="award-subtitle">5th National Undergraduate Chemistry Experiment Innovation Design Competition</p>
-                        <p class="award-subtitle">Digital Intelligence Track</p>
-                        <div class="result-badges">
-                            <span class="result-badge">Predicted: 1.78D</span>
-                            <span class="result-badge">Experimental: 1.66D</span>
-                            <span class="result-badge highlight">6.0% deviation</span>
-                        </div>
-                    </div>
-                    <div class="card-skills">
-                        <span class="skill-tag">GROMACS</span>
-                        <span class="skill-tag">DFT</span>
-                        <span class="skill-tag">Molecular Dynamics</span>
-                    </div>
-                    <a href="details/research-chem-experiment.html" class="detail-link">
-                        <span>Learn more</span>
+                    <a href="details/teaching-complex-analysis.html" class="detail-link">
+                        <span>Details</span>
                         <i data-lucide="arrow-right"></i>
                     </a>
                 </article>
@@ -272,186 +538,54 @@
     <!-- Awards Section -->
     <section id="awards">
         <div class="container">
-            <h2 class="section-title">
-                <i data-lucide="trophy"></i>
-                Awards & Honors
-            </h2>
+            <span class="section-label">Recognition</span>
+            <h2 class="section-title">Awards &amp; Honors</h2>
             <div class="awards-grid">
-                <div class="award-card">
-                    <div class="award-icon">
-                        <i data-lucide="medal"></i>
+                <div class="award-card featured">
+                    <div class="award-icon"><i data-lucide="trophy"></i></div>
+                    <div class="award-content">
+                        <h3>First Prize, Central China Division</h3>
+                        <p class="award-year">2025</p>
+                        <p class="award-detail">5th National Undergraduate Chemistry Experiment Innovation Design Competition, Digital Intelligence Track</p>
                     </div>
+                </div>
+                <div class="award-card">
+                    <div class="award-icon"><i data-lucide="medal"></i></div>
                     <div class="award-content">
                         <h3>USTC Outstanding Student Scholarship</h3>
                         <p class="award-year">2024, 2025</p>
+                        <p class="award-detail">Awarded for academic excellence</p>
                     </div>
-                    <a href="details/award-scholarship.html" class="detail-link">
-                        <span>Learn more</span>
-                        <i data-lucide="arrow-right"></i>
-                    </a>
                 </div>
                 <div class="award-card">
-                    <div class="award-icon">
-                        <i data-lucide="book-marked"></i>
-                    </div>
+                    <div class="award-icon"><i data-lucide="book-marked"></i></div>
                     <div class="award-content">
                         <h3>USTC Strengthening Basic Disciplines Plan Grant</h3>
-                        <p class="award-year">2025 — Top 20%</p>
-                    </div>
-                </div>
-                <div class="award-card highlight">
-                    <div class="award-icon">
-                        <i data-lucide="crown"></i>
-                    </div>
-                    <div class="award-content">
-                        <h3>National Competition First Prize</h3>
                         <p class="award-year">2025</p>
-                        <p class="award-detail">5th National Undergraduate Chemistry Experiment Innovation Design Competition</p>
+                        <p class="award-detail">Top 20% of students eligible</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Teaching Section -->
-    <section id="teaching">
+    <!-- Academic Exchanges Section -->
+    <section id="exchanges">
         <div class="container">
-            <h2 class="section-title">
-                <i data-lucide="graduation-cap"></i>
-                Teaching Assistant
-            </h2>
-            <div class="teaching-grid">
-                <!-- Course 1 -->
-                <article class="teaching-card">
-                    <div class="teaching-header">
-                        <span class="course-term">Fall 2024</span>
-                        <h3>Complex Analysis (for Chemistry)</h3>
-                    </div>
-                    <div class="teaching-meta">
-                        <p><i data-lucide="book-open"></i> Course Type: Required for Chemistry Majors</p>
-                        <p><i data-lucide="users"></i> ~105 students</p>
-                    </div>
-                    <div class="teaching-responsibilities">
-                        <h4><i data-lucide="check-circle"></i> Responsibilities</h4>
-                        <ul>
-                            <li>Led weekly discussion sections (2×45 min/week)</li>
-                            <li>Graded assignments and provided detailed feedback</li>
-                            <li>Provided one-on-one tutoring during office hours</li>
-                            <li>Prepared supplementary problem sets</li>
-                        </ul>
-                    </div>
-                    <a href="details/teaching-complex-analysis.html" class="detail-link">
-                        <span>Learn more</span>
-                        <i data-lucide="arrow-right"></i>
-                    </a>
-                </article>
-
-                <!-- Course 2 -->
-                <article class="teaching-card">
-                    <div class="teaching-header">
-                        <span class="course-term">Spring 2025</span>
-                        <h3>Mathematical Physics Equations (B)</h3>
-                    </div>
-                    <div class="teaching-meta">
-                        <p><i data-lucide="book-open"></i> Course Type: Core Physics Course</p>
-                        <p><i data-lucide="users"></i> ~115 students</p>
-                    </div>
-                    <div class="teaching-responsibilities">
-                        <h4><i data-lucide="check-circle"></i> Responsibilities</h4>
-                        <ul>
-                            <li>Facilitated problem-solving sessions</li>
-                            <li>Developed supplementary materials for PDEs and special functions</li>
-                            <li>Held regular office hours for struggling students</li>
-                            <li>Assisted with exam proctoring and grading</li>
-                        </ul>
-                    </div>
-                    <a href="details/teaching-math-physics.html" class="detail-link">
-                        <span>Learn more</span>
-                        <i data-lucide="arrow-right"></i>
-                    </a>
-                </article>
-
-                <!-- Course 3 -->
-                <article class="teaching-card upcoming">
-                    <div class="teaching-header">
-                        <span class="course-term">Spring 2026</span>
-                        <span class="upcoming-badge">Upcoming</span>
-                        <h3>Quantum Physics</h3>
-                    </div>
-                    <div class="teaching-meta">
-                        <p><i data-lucide="book-open"></i> Course Type: Core Physics Course</p>
-                        <p><i data-lucide="users"></i> ~16 students</p>
-                    </div>
-                    <div class="teaching-responsibilities">
-                        <h4><i data-lucide="check-circle"></i> Responsibilities</h4>
-                        <ul>
-                            <li>Demonstrating strong command of theoretical foundations</li>
-                            <li>Leading discussion sections on quantum mechanics concepts</li>
-                            <li>Grading problem sets and exams</li>
-                        </ul>
-                    </div>
-                    <a href="details/teaching-quantum.html" class="detail-link">
-                        <span>Learn more</span>
-                        <i data-lucide="arrow-right"></i>
-                    </a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <h2 class="section-title">
-                <i data-lucide="cpu"></i>
-                Technical Skills
-            </h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i data-lucide="brain-circuit"></i> Machine Learning</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">PyTorch</span>
-                        <span class="skill-item">GNNs</span>
-                        <span class="skill-item">scikit-learn</span>
-                        <span class="skill-item">Neural Network Architecture</span>
-                    </div>
+            <span class="section-label">Engagement</span>
+            <h2 class="section-title">Academic Exchanges</h2>
+            <div class="exchanges-list">
+                <div class="exchange-item">
+                    <span class="exchange-date">Aug 2025</span>
+                    <span class="exchange-detail">Shanghai Institute of Organic Chemistry, Shanghai Institute of Ceramics, Suzhou Institute of Nano-Tech and Nano-Bionics</span>
                 </div>
-                <div class="skill-category">
-                    <h3><i data-lucide="code-2"></i> Programming</h3>
-                    <div class="skill-list">
-                        <span class="skill-item primary">Python (Primary)</span>
-                        <span class="skill-item">MATLAB</span>
-                        <span class="skill-item">Basic C++</span>
-                    </div>
+                <div class="exchange-item">
+                    <span class="exchange-date">Jul 2025</span>
+                    <span class="exchange-detail">Hong Kong University, HKUST, Chinese University of Hong Kong, City University of Hong Kong</span>
                 </div>
-                <div class="skill-category">
-                    <h3><i data-lucide="flask-conical"></i> Computational Chemistry</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">DFT/TD-DFT</span>
-                        <span class="skill-item">Quantum Chemistry</span>
-                        <span class="skill-item">Gaussian</span>
-                        <span class="skill-item">VASP</span>
-                        <span class="skill-item">Molecular Visualization</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i data-lucide="sigma"></i> Mathematical</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">Linear Algebra</span>
-                        <span class="skill-item">Group Theory</span>
-                        <span class="skill-item">Probability & Statistics</span>
-                        <span class="skill-item">Complex Analysis</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3><i data-lucide="wrench"></i> Tools</h3>
-                    <div class="skill-list">
-                        <span class="skill-item">LaTeX</span>
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">Linux/Unix</span>
-                        <span class="skill-item">Data Analysis</span>
-                        <span class="skill-item">numpy/pandas/matplotlib</span>
-                    </div>
+                <div class="exchange-item">
+                    <span class="exchange-date">Aug 2023</span>
+                    <span class="exchange-detail">Dalian Institute of Chemical Physics, Changchun Institute of Applied Chemistry, Shenyang Institute of Metal Research</span>
                 </div>
             </div>
         </div>
@@ -460,38 +594,36 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">
-                <i data-lucide="message-circle"></i>
-                Contact
-            </h2>
-            <div class="contact-card">
-                <div class="contact-items">
-                    <a href="mailto:xxy220348@mail.ustc.edu.cn" class="contact-item">
-                        <div class="contact-icon">
-                            <i data-lucide="mail"></i>
-                        </div>
-                        <div class="contact-info">
-                            <span class="contact-label">Email</span>
-                            <span class="contact-value">xxy220348@mail.ustc.edu.cn</span>
-                        </div>
-                    </a>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i data-lucide="phone"></i>
-                        </div>
-                        <div class="contact-info">
-                            <span class="contact-label">Phone</span>
-                            <span class="contact-value">+86 18390703209</span>
-                        </div>
+            <span class="section-label">Connect</span>
+            <h2 class="section-title">Contact</h2>
+            <p class="section-subtitle">Open to AI-for-Science internship opportunities and research collaborations.</p>
+            <div class="contact-grid">
+                <a href="mailto:xxy220348@mail.ustc.edu.cn" class="contact-item">
+                    <div class="contact-icon"><i data-lucide="mail"></i></div>
+                    <div class="contact-info">
+                        <span class="contact-label">Email</span>
+                        <span class="contact-value">xxy220348@mail.ustc.edu.cn</span>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i data-lucide="building-2"></i>
-                        </div>
-                        <div class="contact-info">
-                            <span class="contact-label">University</span>
-                            <span class="contact-value">University of Science and Technology of China<br>Department of Chemical Physics</span>
-                        </div>
+                </a>
+                <a href="https://github.com/techandscixie2005" class="contact-item" target="_blank" rel="noopener">
+                    <div class="contact-icon"><i data-lucide="github"></i></div>
+                    <div class="contact-info">
+                        <span class="contact-label">GitHub</span>
+                        <span class="contact-value">techandscixie2005</span>
+                    </div>
+                </a>
+                <a href="Xie_Xiangyu_Resume.pdf" class="contact-item">
+                    <div class="contact-icon"><i data-lucide="file-text"></i></div>
+                    <div class="contact-info">
+                        <span class="contact-label">Resume</span>
+                        <span class="contact-value">Download PDF</span>
+                    </div>
+                </a>
+                <div class="contact-item">
+                    <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                    <div class="contact-info">
+                        <span class="contact-label">Location</span>
+                        <span class="contact-value">Hefei, China</span>
                     </div>
                 </div>
             </div>
@@ -500,7 +632,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Xie Xiangyu. Built with passion for AI & Science.</p>
+        <p>&copy; 2026 Xie Xiangyu &middot; Chemical Physics &middot; University of Science and Technology of China</p>
     </footer>
 
     <script src="script.js"></script>
