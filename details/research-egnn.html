@@ -121,6 +121,22 @@
                 <span class="tag tag-purple">Computational Chemistry</span>
             </div>
         </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="alert-triangle"></i> Limitations &amp; Next Steps</h2>
+            <h4 style="font-size:0.9rem;font-weight:600;color:var(--text-primary);margin-bottom:0.5rem;">Current Scope</h4>
+            <ul>
+                <li>Predictions are isolated-molecule properties; they do not directly account for solid-state environmental effects (crystal packing, intermolecular coupling) that influence experimental RTP performance.</li>
+                <li>The dataset (~6,000 molecules) is moderate in size for deep learning; performance may benefit from larger and more diverse training sets.</li>
+                <li>SOC(T1→S1) prediction remains challenging (test R² = 0.6263), suggesting this quantity may depend on finer electronic structure features not fully captured by the current architecture.</li>
+            </ul>
+            <h4 style="font-size:0.9rem;font-weight:600;color:var(--text-primary);margin:1rem 0 0.5rem;">Future Directions</h4>
+            <ul>
+                <li>Incorporate solid-state descriptors or multi-scale features to bridge the gap between isolated-molecule predictions and condensed-phase RTP behavior.</li>
+                <li>Explore multi-fidelity learning strategies that combine DFT labels with higher-level (e.g., coupled-cluster) reference data where available.</li>
+                <li>Extend the model to predict additional photophysical quantities such as phosphorescence lifetime and quantum yield.</li>
+            </ul>
+        </div>
     </div>
 
     <script>
