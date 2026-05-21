@@ -20,10 +20,16 @@ handleNavScroll();
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
+function setNavIcon(name) {
+    navToggle.innerHTML = '';
+    const icon = document.createElement('i');
+    icon.setAttribute('data-lucide', name);
+    navToggle.appendChild(icon);
+}
+
 navToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    const icon = navToggle.querySelector('i');
-    icon.setAttribute('data-lucide', navLinks.classList.contains('active') ? 'x' : 'menu');
+    setNavIcon(navLinks.classList.contains('active') ? 'x' : 'menu');
     lucide.createIcons();
 });
 
@@ -31,8 +37,7 @@ navToggle.addEventListener('click', () => {
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
-        const icon = navToggle.querySelector('i');
-        icon.setAttribute('data-lucide', 'menu');
+        setNavIcon('menu');
         lucide.createIcons();
     });
 });

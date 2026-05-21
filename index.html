@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
 </head>
 <body>
     <!-- Navigation -->
@@ -38,6 +38,45 @@
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero-grid"></div>
+        <!-- Molecular graph motif: subtle nodes and edges -->
+        <div class="hero-motif" aria-hidden="true">
+            <span class="hero-motif-node" style="top:18%;left:22%"></span>
+            <span class="hero-motif-line" style="top:18%;left:22%;width:16%;rotate:-2deg"></span>
+            <span class="hero-motif-node" style="top:18%;left:38%"></span>
+            <span class="hero-motif-line" style="top:18%;left:38%;width:16%;rotate:4deg"></span>
+            <span class="hero-motif-node" style="top:18%;left:54%"></span>
+            <span class="hero-motif-line" style="top:18%;left:54%;width:16%;rotate:-1deg"></span>
+            <span class="hero-motif-node" style="top:18%;left:70%"></span>
+            <span class="hero-motif-node" style="top:38%;left:14%"></span>
+            <span class="hero-motif-line" style="top:36%;left:18%;width:12%;rotate:62deg"></span>
+            <span class="hero-motif-node" style="top:38%;left:30%"></span>
+            <span class="hero-motif-line" style="top:37%;left:32%;width:14%;rotate:-15deg"></span>
+            <span class="hero-motif-node" style="top:38%;left:46%"></span>
+            <span class="hero-motif-line" style="top:37%;left:48%;width:14%;rotate:10deg"></span>
+            <span class="hero-motif-node" style="top:38%;left:62%"></span>
+            <span class="hero-motif-line" style="top:48%;left:64%;width:14%;rotate:75deg"></span>
+            <span class="hero-motif-node" style="top:38%;left:78%"></span>
+            <span class="hero-motif-node" style="top:58%;left:22%"></span>
+            <span class="hero-motif-line" style="top:56%;left:26%;width:16%;rotate:-20deg"></span>
+            <span class="hero-motif-node" style="top:58%;left:42%"></span>
+            <span class="hero-motif-line" style="top:57%;left:44%;width:14%;rotate:8deg"></span>
+            <span class="hero-motif-node" style="top:58%;left:58%"></span>
+            <span class="hero-motif-line" style="top:68%;left:56%;width:18%;rotate:68deg"></span>
+            <span class="hero-motif-node" style="top:58%;left:74%"></span>
+            <span class="hero-motif-node" style="top:76%;left:18%"></span>
+            <span class="hero-motif-line" style="top:74%;left:22%;width:16%;rotate:-28deg"></span>
+            <span class="hero-motif-node" style="top:76%;left:38%"></span>
+            <span class="hero-motif-line" style="top:76%;left:40%;width:14%;rotate:5deg"></span>
+            <span class="hero-motif-node" style="top:76%;left:54%"></span>
+            <span class="hero-motif-node" style="top:76%;left:70%"></span>
+        </div>
+        <!-- Spectrum curve accent -->
+        <svg class="spectrum-line" viewBox="0 0 800 80" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M0,40 C60,20 100,10 160,35 C220,60 260,45 320,25 C380,5 420,55 480,30 C540,5 580,50 640,28 C700,6 760,40 800,38"
+                  fill="none" stroke="rgba(91,140,189,0.5)" stroke-width="1.2" />
+            <path d="M0,48 C60,68 100,50 160,55 C220,60 260,35 320,48 C380,62 420,38 480,52 C540,66 580,42 640,50 C700,58 760,44 800,50"
+                  fill="none" stroke="rgba(59,108,180,0.3)" stroke-width="0.8" />
+        </svg>
         <div class="hero-content">
             <p class="hero-badge">AI for Science &middot; Internship Application</p>
             <h1>
@@ -104,7 +143,7 @@
                 <!-- Focus Card B -->
                 <div class="focus-card card-spectra">
                     <div class="focus-icon">
-                        <i data-lucide="waveform"></i>
+                        <i data-lucide="activity"></i>
                     </div>
                     <h3>Spectra-to-Structure &amp; Multimodal Representation</h3>
                     <p>Connecting spectroscopic evidence to molecular geometry. Designing coordinate-aware spectral encoders with distance-bias attention, cross-modal fusion, and retrieval-based candidate ranking for molecular structure inference.</p>
@@ -137,6 +176,8 @@
             </div>
         </div>
     </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
 
     <!-- Featured Projects Section -->
     <section id="projects">
@@ -329,6 +370,8 @@
         </div>
     </section>
 
+    <div class="section-divider" aria-hidden="true"></div>
+
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
@@ -407,6 +450,8 @@
             </div>
         </div>
     </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
 
     <!-- Education Section -->
     <section id="education">
@@ -534,6 +579,8 @@
             </div>
         </div>
     </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
 
     <!-- Awards Section -->
     <section id="awards">
