@@ -867,6 +867,32 @@ section {
     font-style: italic;
 }
 
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.project-evidence {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.evidence-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.775rem;
+    color: var(--text-muted);
+}
+
+.evidence-item i {
+    width: 14px;
+    height: 14px;
+    color: var(--accent-cyan);
+}
+
 /* ========================================
    Detail Links (in-card CTA)
    ======================================== */

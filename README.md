@@ -1,115 +1,87 @@
-# Xie Xiangyu Portfolio
+# Xie Xiangyu — AI-for-Science Research Portfolio
 
-A personal portfolio website showcasing the academic achievements, research experience, and technical skills of Xie Xiangyu (谢翔宇), a Chemical Physics student at the University of Science and Technology of China (USTC).
+Personal research portfolio showcasing work at the intersection of **geometric deep learning**, **computational chemistry**, and **molecular machine learning**.
 
-## Overview
+**Live site:** [techandscixie2005.github.io](https://techandscixie2005.github.io/portfolio)
 
-This portfolio features:
-- **Education**: B.S. in Chemical Physics, USTC (Class of 2026)
-- **Research Interests**: AI for Science, Graph Neural Networks, Computational Chemistry
-- **Teaching Experience**: TA for Complex Analysis, Mathematical Physics Equations, Quantum Physics
+## Positioning
 
-## Live Website
+This portfolio is designed for **AI-for-Science internship applications**, emphasizing:
+- Geometry-aware molecular representation learning (EGNNs, SE(3) equivariance)
+- Spectra-to-structure multimodal encoding and retrieval
+- Computational chemistry and photophysics research
+- Molecular simulation and DFT workflows
 
-Visit the portfolio at: [https://techandscixie2005.github.io/portfolio](https://techandscixie2005.github.io/portfolio)
+## Homepage Information Architecture
 
-## Project Structure
+1. **Hero** — Name, affiliation, research headline, key tags
+2. **Education** — USTC B.S. Chemical Physics, advisor, coursework (placed near top as academic credibility signal)
+3. **Research Focus** — Three interconnected directions: geometric molecular learning, spectra-to-structure, quantum chemistry
+4. **Featured Research Projects** — Four projects with evidence/artifact lines
+5. **Skills** — ML, computational chemistry, mathematics, AI-assisted research engineering
+6. **Teaching / Experience** — TA roles for Quantum Physics, Mathematical Physics Equations, Complex Functions
+7. **Awards** — Competition prizes and scholarships
+8. **Academic Research Exposure** — Institute visits across China
+9. **Contact** — Email, GitHub, resume download
 
-```
-├── index.html                    # Main portfolio page
-├── styles.css                    # Custom CSS styling
-├── script.js                     # JavaScript for interactivity
-├── Xie_Xiangyu_Resume.tex        # LaTeX source for resume
-├── details/                      # Detailed project pages
-│   ├── research-egnn.html
-│   ├── research-doublet-emissive.html
-│   ├── research-chem-experiment.html
-│   ├── teaching-complex-analysis.html
-│   ├── teaching-math-physics.html
-│   ├── teaching-quantum.html
-│   └── award-scholarship.html
-└── README.md                     # This file
-```
+## Featured Projects
 
-## Features
+| Project | Type | Evidence |
+|---------|------|----------|
+| **EGNN for RTP Property Prediction** | Bachelor Thesis | Model architecture, test-set R² metrics |
+| **MultiSpec-GeoDiff** | Research Demo / Prototype | Runnable demo, GitHub repo |
+| **Doublet-Emissive Molecular Design** | Undergraduate Research | Synthesis and characterization |
+| **Multiscale Molecular Simulation** | Competition (First Prize) | MD/DFT workflow, experimental validation |
 
-### Sections
-- **Hero**: Introduction with name, title, and research interests
-- **Education**: USTC background, GPA trajectory, advisor info, key coursework
-- **Research Experience**: 
-  - EGNN for Room-Temperature Phosphorescence prediction
-  - Doublet-Emissive light-emitting materials
-  - Multiscale Molecular Simulation for chemistry education
-- **Awards & Honors**: Scholarships and competition achievements
-- **Teaching Assistant**: Course assistance experience
-- **Technical Skills**: ML, Programming, Computational Chemistry, Mathematical tools
-- **Contact**: Email, phone, and university information
+## Technical Stack
 
-### Technical Implementation
-- **Responsive Design**: Mobile-first approach with breakpoints at 480px, 768px, and 900px
-- **Dark Theme**: Modern dark color scheme with blue/purple accent gradients
-- **Animations**: 
-  - Fade-in animations on scroll
-  - Parallax hero background
-  - GPA trajectory bar animations
-  - Smooth scrolling navigation
-- **Icons**: Lucide icons via CDN
-- **Fonts**: Inter font family from Google Fonts
+- **Frontend:** HTML5, CSS3 (Grid, Flexbox, custom properties), vanilla JavaScript
+- **Icons:** Lucide (CDN)
+- **Fonts:** Inter (Google Fonts)
+- **Deployment:** GitHub Pages
 
-## Usage
-
-### Viewing Locally
-
-Simply open `index.html` in any modern web browser:
+## Local Preview
 
 ```bash
 # Option 1: Open directly
 open index.html
 
-# Option 2: Use a simple HTTP server
+# Option 2: Local HTTP server
 python -m http.server 8000
-# Then visit http://localhost:8000
+# Visit http://localhost:8000
 ```
 
-### Customization
+## GitHub Pages Deployment
 
-To customize the portfolio:
-
-1. **Edit `index.html`**: Update personal information, sections, and content
-2. **Modify `styles.css`**: Adjust colors, spacing, and visual elements
-3. **Update `script.js`**: Add or modify interactive features
-4. **Add detail pages**: Create additional pages in the `details/` folder
-
-### Deployment
-
-The site is deployed via GitHub Pages. To deploy:
-
-1. Push the repository to GitHub
+1. Push to the `main` branch
 2. Go to Repository Settings → Pages
-3. Select the `main` branch as the source
-4. Your site will be available at `https://techandscixie2005.github.io/portfolio`
+3. Set source to `main` branch, root directory
+4. Site deploys to `https://techandscixie2005.github.io/portfolio`
 
-## Browser Support
+## Repository Structure
 
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Technologies Used
-
-- HTML5
-- CSS3 (CSS Variables, Grid, Flexbox, Animations)
-- JavaScript (ES6+)
-- [Lucide Icons](https://lucide.dev/)
-- [Google Fonts - Inter](https://fonts.google.com/specimen/Inter)
-
-## License
-
-Copyright © 2026 Xie Xiangyu. All rights reserved.
+```
+├── index.html                             # Main portfolio page
+├── styles.css                             # Stylesheet
+├── script.js                              # Interactivity (scroll, nav, fade-in)
+├── Xie_Xiangyu_Resume.pdf                 # Downloadable resume
+├── details/                               # Project and teaching detail pages
+│   ├── research-egnn.html
+│   ├── research-multispec-geodiff.html
+│   ├── research-doublet-emissive.html
+│   ├── research-chem-experiment.html
+│   ├── teaching-quantum.html
+│   ├── teaching-math-physics.html
+│   ├── teaching-complex-analysis.html
+│   └── award-scholarship.html
+└── README.md
+```
 
 ## Contact
 
-- Email: xxy220348@mail.ustc.edu.cn
-- Phone: +86 18390703209
-- University: University of Science and Technology of China, Department of Chemical Physics
+- **Email:** xxy220348@mail.ustc.edu.cn
+- **GitHub:** [techandscixie2005](https://github.com/techandscixie2005)
+
+---
+
+&copy; 2026 Xie Xiangyu. All rights reserved.

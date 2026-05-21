@@ -24,10 +24,10 @@
         <div class="nav-container">
             <a href="#hero" class="nav-logo">Xie Xiangyu</a>
             <ul class="nav-links">
+                <li><a href="#education">Education</a></li>
                 <li><a href="#focus">Focus</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#teaching">Teaching</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -112,10 +112,64 @@
                 </a>
             </div>
         </div>
-        <a href="#focus" class="scroll-indicator" aria-label="Scroll to content">
+        <a href="#education" class="scroll-indicator" aria-label="Scroll to content">
             <i data-lucide="chevron-down"></i>
         </a>
     </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <span class="section-label">Background</span>
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+                <div class="education-header">
+                    <div>
+                        <h3>University of Science and Technology of China</h3>
+                        <p class="location"><i data-lucide="map-pin"></i> Hefei, China</p>
+                    </div>
+                    <div class="degree-badge">
+                        <span class="degree">B.S. in Chemical Physics</span>
+                        <span class="year">Class of 2026</span>
+                    </div>
+                </div>
+                <div class="education-details">
+                    <div class="gpa-trajectory-compact">
+                        <p class="gpa-current">GPA: 3.23 / 4.3</p>
+                        <p class="gpa-trend">
+                            Academic trajectory:
+                            <span>Freshman 2.6</span>
+                            <span class="trend-up">→</span>
+                            <span>Sophomore 3.4</span>
+                            <span class="trend-up">→</span>
+                            <span>Junior 3.5</span>
+                        </p>
+                    </div>
+                    <div class="advisor-info">
+                        <h4>Advisor</h4>
+                        <p>Prof. Jun Jiang</p>
+                        <p class="field">Computational Chemistry &amp; AI for Science</p>
+                    </div>
+                </div>
+                <div class="coursework">
+                    <h4>Key Coursework</h4>
+                    <div class="course-tags">
+                        <span class="course-tag">Advanced Quantum Mechanics</span>
+                        <span class="course-tag">Quantum Chemistry</span>
+                        <span class="course-tag">Statistical Mechanics</span>
+                        <span class="course-tag">Mathematical Physics Equations</span>
+                        <span class="course-tag">Group Theory</span>
+                        <span class="course-tag">Linear Algebra</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider" aria-hidden="true"></div>
+
 
     <!-- Research Focus Section -->
     <section id="focus">
@@ -194,7 +248,7 @@
                 <article class="project-card">
                     <div class="project-card-header">
                         <h3>Equivariant Graph Neural Networks for Room-Temperature Phosphorescence Property Prediction</h3>
-                        <span class="project-badge badge-thesis">Bachelor Thesis</span>
+                        <span class="project-badge badge-thesis">Undergraduate Thesis</span>
                     </div>
                     <div class="project-meta">
                         <span class="project-meta-item"><i data-lucide="user"></i> Supervisor: Prof. Jun Jiang</span>
@@ -232,6 +286,10 @@
                         <span class="tag tag-purple">Photophysics</span>
                     </div>
                     <div class="project-footer">
+                        <div class="project-evidence">
+                            <span class="evidence-item"><i data-lucide="file-check"></i> Undergraduate Thesis Project</span>
+                            <span class="evidence-item"><i data-lucide="bar-chart-3"></i> Test-set R&sup2; on ~6,000 molecules</span>
+                        </div>
                         <a href="details/research-egnn.html" class="detail-link">
                             <span>Full project details</span>
                             <i data-lucide="arrow-right"></i>
@@ -272,7 +330,20 @@
                         <span class="tag tag-purple">Geometry-aware</span>
                     </div>
                     <div class="project-footer">
-                        <span class="project-note">Research prototype — active development</span>
+                        <div class="project-evidence">
+                            <span class="evidence-item"><i data-lucide="github"></i> Runnable Demo / Prototype</span>
+                            <span class="evidence-item"><i data-lucide="code-2"></i> Coordinate-aware spectral encoder</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="details/research-multispec-geodiff.html" class="detail-link">
+                                <span>Project Details</span>
+                                <i data-lucide="arrow-right"></i>
+                            </a>
+                            <a href="https://github.com/techandscixie2005/MultiSpec-GeoDiff-Demo" class="detail-link" target="_blank" rel="noopener">
+                                <span>GitHub Repo</span>
+                                <i data-lucide="external-link"></i>
+                            </a>
+                        </div>
                     </div>
                 </article>
 
@@ -297,7 +368,7 @@
                                 <li>Designed TTM-AnQ radical: TTM donor coupled with 9,10-anthraquinone acceptor</li>
                                 <li>Multi-step synthesis: Friedel–Crafts, Suzuki coupling, oxidation</li>
                                 <li>Characterization: UV-Vis, fluorescence, CV, transient fluorescence</li>
-                                <li>First systematic study of acceptor-functionalized radical emitters</li>
+                                <li>Exploratory undergraduate study of acceptor-functionalized radical emitters</li>
                             </ul>
                         </div>
                     </div>
@@ -315,6 +386,10 @@
                         <span class="tag">Spectroscopy</span>
                     </div>
                     <div class="project-footer">
+                        <div class="project-evidence">
+                            <span class="evidence-item"><i data-lucide="flask-conical"></i> Undergraduate Research</span>
+                            <span class="evidence-item"><i data-lucide="scan-eye"></i> Synthesis &amp; Characterization</span>
+                        </div>
                         <a href="details/research-doublet-emissive.html" class="detail-link">
                             <span>Full project details</span>
                             <i data-lucide="arrow-right"></i>
@@ -363,6 +438,10 @@
                         <span class="tag">Scientific Computing</span>
                     </div>
                     <div class="project-footer">
+                        <div class="project-evidence">
+                            <span class="evidence-item"><i data-lucide="trophy"></i> Competition First Prize</span>
+                            <span class="evidence-item"><i data-lucide="cpu"></i> MD / DFT Workflow</span>
+                        </div>
                         <a href="details/research-chem-experiment.html" class="detail-link">
                             <span>Full project details</span>
                             <i data-lucide="arrow-right"></i>
@@ -455,55 +534,6 @@
     </section>
 
     <div class="section-divider" aria-hidden="true"></div>
-
-    <!-- Education Section -->
-    <section id="education">
-        <div class="container">
-            <span class="section-label">Background</span>
-            <h2 class="section-title">Education</h2>
-            <div class="education-card">
-                <div class="education-header">
-                    <div>
-                        <h3>University of Science and Technology of China</h3>
-                        <p class="location"><i data-lucide="map-pin"></i> Hefei, China</p>
-                    </div>
-                    <div class="degree-badge">
-                        <span class="degree">B.S. in Chemical Physics</span>
-                        <span class="year">Class of 2026</span>
-                    </div>
-                </div>
-                <div class="education-details">
-                    <div class="gpa-trajectory-compact">
-                        <p class="gpa-current">GPA: 3.23 / 4.3</p>
-                        <p class="gpa-trend">
-                            Academic trajectory:
-                            <span>Freshman 2.6</span>
-                            <span class="trend-up">→</span>
-                            <span>Sophomore 3.4</span>
-                            <span class="trend-up">→</span>
-                            <span>Junior 3.5</span>
-                        </p>
-                    </div>
-                    <div class="advisor-info">
-                        <h4>Advisor</h4>
-                        <p>Prof. Jun Jiang</p>
-                        <p class="field">Computational Chemistry &amp; AI for Science</p>
-                    </div>
-                </div>
-                <div class="coursework">
-                    <h4>Key Coursework</h4>
-                    <div class="course-tags">
-                        <span class="course-tag">Advanced Quantum Mechanics</span>
-                        <span class="course-tag">Quantum Chemistry</span>
-                        <span class="course-tag">Statistical Mechanics</span>
-                        <span class="course-tag">Mathematical Physics Equations</span>
-                        <span class="course-tag">Group Theory</span>
-                        <span class="course-tag">Linear Algebra</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Teaching Section -->
     <section id="teaching">
@@ -619,11 +649,12 @@
         </div>
     </section>
 
-    <!-- Academic Exchanges Section -->
+    <!-- Research Exposure Section -->
     <section id="exchanges">
         <div class="container">
-            <span class="section-label">Engagement</span>
-            <h2 class="section-title">Academic Exchanges</h2>
+            <span class="section-label">Exposure</span>
+            <h2 class="section-title">Academic Research Exposure</h2>
+            <p class="section-subtitle">Visits to leading chemistry and materials science institutes across China, building research perspective in molecular science, computational chemistry, and AI-driven materials discovery.</p>
             <div class="exchanges-list">
                 <div class="exchange-item">
                     <span class="exchange-date">Aug 2025</span>

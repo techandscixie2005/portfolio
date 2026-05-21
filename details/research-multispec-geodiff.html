@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiSpec-GeoDiff | Xie Xiangyu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+</head>
+<body class="detail-page">
+    <div class="detail-nav">
+        <a href="../index.html#projects" class="back-link">
+            <i data-lucide="arrow-left"></i>
+            Back to Research
+        </a>
+    </div>
+
+    <div class="detail-hero">
+        <h1>MultiSpec-GeoDiff: Geometry-Constrained Multimodal Spectra-to-Structure Retrieval</h1>
+        <div class="detail-meta">
+            <div class="detail-meta-item">
+                <i data-lucide="calendar"></i>
+                2025 &ndash; 2026
+            </div>
+            <div class="detail-meta-item">
+                <i data-lucide="tag"></i>
+                Research Demo / Prototype
+            </div>
+            <div class="detail-meta-item">
+                <a href="https://github.com/techandscixie2005/MultiSpec-GeoDiff-Demo" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:0.4rem;color:var(--accent-navy);text-decoration:none;font-weight:500;">
+                    <i data-lucide="github"></i> GitHub Repo
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail-content">
+        <div class="detail-section">
+            <h2><i data-lucide="file-text"></i> Problem</h2>
+            <p>Inferring molecular structure from spectroscopic evidence is a fundamental inverse problem in chemistry. Given multimodal spectra (IR, Raman, NMR, MS), how do we recover plausible geometry-consistent molecular structures? This is the <strong>spectra-to-structure retrieval</strong> problem: encode spectra, retrieve candidate structures, and rank them by geometric plausibility.</p>
+            <p>Traditional approaches treat each spectrum independently or rely on fragment-based library search. This project explores whether <strong>coordinate-aware multimodal encoders</strong> and geometry-constrained retrieval can narrow the structure candidate space more effectively.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="lightbulb"></i> Core Idea</h2>
+            <p>The central hypothesis is that <strong>spectral features carry implicit geometric information</strong> about molecular structure — bond lengths, angles, and connectivity patterns leave signatures across multiple spectroscopic modalities. By jointly encoding multiple spectra with explicit coordinate bias and using attention across modalities, we can produce a geometry-informed molecular representation for retrieval, even before running a full geometric generative model.</p>
+            <ul>
+                <li><strong>Coordinate-aware spectral encoding:</strong> Spectral inputs are processed with positional encodings that reflect 3D structural priors, biasing attention toward geometrically meaningful spectral regions.</li>
+                <li><strong>Intra-modal attention with spectral coordinate bias:</strong> Within each modality, attention weights are modulated by estimated inter-atomic distance signatures embedded in the spectral domain.</li>
+                <li><strong>Cross-modal fusion:</strong> Multi-head cross-attention combines IR, Raman, NMR, and MS representations into a unified molecular embedding.</li>
+                <li><strong>Retrieval and reranking:</strong> Candidate structures are retrieved from a molecular database and reranked using forward physical validation (comparing predicted spectra against input).</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="cpu"></i> Implemented Demo / Prototype</h2>
+            <p>This is a <strong>research demo and prototype</strong>, not a production-ready model. The current implementation includes:</p>
+            <ul>
+                <li>A coordinate-aware spectral encoder that processes IR and Raman inputs with distance-bias attention</li>
+                <li>Intra-modal attention layers with spectral coordinate bias for each modality</li>
+                <li>Cross-modal fusion module combining IR and Raman representations</li>
+                <li>A retrieval pipeline that ranks candidate molecules from a pre-indexed structural database</li>
+                <li>Forward physical validation: candidates are scored by comparing DFT-computed spectra against query spectra</li>
+            </ul>
+            <p>The prototype demonstrates the feasibility of the coordinate-aware multimodal approach but does not yet include the full geometric generative component. See the GitHub repository for implementation details and example notebooks.</p>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="workflow"></i> Technical Path</h2>
+            <ul>
+                <li><strong>Stage 1 &ndash; Spectral Encoding:</strong> Each spectral modality (IR, Raman, NMR, MS) is processed by a dedicated encoder. Coordinate bias is injected via learned positional encodings derived from estimated inter-atomic distance distributions.</li>
+                <li><strong>Stage 2 &ndash; Intra-modal Attention:</strong> Self-attention within each modality, with attention weights modulated by spectral coordinate bias to emphasize geometrically informative spectral regions (e.g., fingerprint region in IR).</li>
+                <li><strong>Stage 3 &ndash; Cross-modal Fusion:</strong> Multi-head cross-attention across modalities produces a joint molecular representation that integrates complementary structural information from each spectrum type.</li>
+                <li><strong>Stage 4 &ndash; Retrieval:</strong> The joint embedding is used to query a molecular structure database. Top-k candidates are retrieved via embedding similarity.</li>
+                <li><strong>Stage 5 &ndash; Reranking:</strong> Candidates are reranked through forward physical validation: DFT-computed spectra are compared against the query spectra, and candidates with the best match are returned.</li>
+                <li><strong>Future Extension &ndash; Geometric Generation:</strong> A planned GeoDiff-style generative module would propose novel structures conditioned on the joint spectral embedding, moving beyond retrieval into de novo structure generation.</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="layers"></i> Current Scope</h2>
+            <ul>
+                <li>Multimodal encoding supports IR, Raman, NMR, and MS spectra</li>
+                <li>Coordinate-aware attention mechanisms are implemented for IR and Raman modalities</li>
+                <li>Cross-modal fusion produces joint molecular embeddings</li>
+                <li>Retrieval pipeline with forward physical validation reranking is functional</li>
+                <li>The geometric generative extension (GeoDiff-style) is designed but not yet implemented</li>
+                <li>Current evaluation is on curated small-molecule datasets</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="alert-triangle"></i> Limitations</h2>
+            <ul>
+                <li>This is a research prototype; retrieval accuracy on large and diverse molecular databases has not been systematically benchmarked.</li>
+                <li>The coordinate bias mechanism relies on estimated distance distributions, which may degrade for highly flexible or conformationally complex molecules.</li>
+                <li>Forward physical validation uses DFT-computed spectra, which introduces computational cost and DFT-approximation error into the reranking step.</li>
+                <li>The geometric generative extension is in design phase; the current system retrieves from an existing database rather than generating novel structures.</li>
+                <li>Training data requirements for effective cross-modal fusion across all four modalities have not been fully characterized.</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="arrow-right-circle"></i> Next Steps</h2>
+            <ul>
+                <li>Implement the GeoDiff-style geometric generative module for de novo structure proposal conditioned on spectral embeddings</li>
+                <li>Benchmark retrieval and reranking performance on standard spectra-to-structure datasets</li>
+                <li>Extend coordinate-aware encoding to handle conformational flexibility through multi-conformer spectral averaging</li>
+                <li>Explore self-supervised pretraining strategies for the spectral encoder to reduce dependence on labeled structure data</li>
+                <li>Investigate uncertainty quantification for retrieval confidence and candidate ranking thresholds</li>
+            </ul>
+        </div>
+
+        <div class="detail-section">
+            <h2><i data-lucide="code"></i> Technologies Used</h2>
+            <div class="detail-tags">
+                <span class="tag tag-purple">PyTorch</span>
+                <span class="tag tag-purple">Attention Mechanisms</span>
+                <span class="tag tag-purple">Multimodal Learning</span>
+                <span class="tag tag-cyan">Spectroscopy</span>
+                <span class="tag tag-cyan">Molecular Representation</span>
+                <span class="tag tag-green">Retrieval</span>
+                <span class="tag">Python</span>
+                <span class="tag">Coordinate-aware Encoding</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
