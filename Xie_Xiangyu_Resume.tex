@@ -11,6 +11,14 @@
 % For mathematical symbols
 \usepackage{amsmath}
 
+% Chinese support for the bilingual resume; keep the custom class layout intact.
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2.5]{SimSun}
+\setCJKsansfont[AutoFakeBold=2.5]{Microsoft YaHei}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\emergencystretch=2em
+
 % For hyperlinks
 \usepackage{hyperref}
 \hypersetup{
@@ -26,6 +34,128 @@
 \contacts{Email: \href{mailto:xxy220348@mail.ustc.edu.cn}{xxy220348@mail.ustc.edu.cn} \linebreak Phone: +86 18390703209 \linebreak Website: \linebreak \href{https://techandscixie2005.github.io/portfolio}{techandscixie2005.github.io/portfolio}}
 
 \begin{document}
+
+% Chinese resume section
+\name{谢翔宇}
+\address{Xiangyu Xie \linebreak 中国科学技术大学 \linebreak 化学物理系，2026届}
+\contacts{邮箱：\href{mailto:xxy220348@mail.ustc.edu.cn}{xxy220348@mail.ustc.edu.cn} \linebreak 电话：+86 18390703209 \linebreak 主页：\linebreak \href{https://techandscixie2005.github.io/portfolio}{techandscixie2005.github.io/portfolio}}
+
+% Print the Chinese header
+\makeheader
+
+\begin{cvsection}{教育背景}
+	\begin{cvsubsection}{合肥，中国}{中国科学技术大学}{2022年秋 -- 预计2026年春}
+		\begin{itemize}
+			\item \textbf{化学物理理学学士}，2026届
+			\item \textbf{GPA：} 3.23/4.3 -- 成绩呈持续上升趋势：大一（2.6）、大二（3.4）、大三（3.5）
+			\item \textbf{导师：} 江俊教授（计算化学与 AI for Science）
+			\item \textbf{相关课程：} 量子力学、统计力学、数学物理方程、高等量子力学、量子化学、线性代数
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{科研经历}
+	\begin{cvsubsection}{本科毕业论文}{导师：江俊教授}{2025年秋 -- 2026年春}
+		\textbf{基于等变图神经网络的室温磷光分子性质预测}
+		\begin{itemize}
+			\item \textbf{数据集与预测目标：} 面向约 6,000 个有机室温磷光候选分子，构建基于三维分子图的数据处理流程，并引入 $\Delta E_{S_1-T_1}$、$\mathrm{SOC}_{T_1\to S_1}$、$\mathrm{SOC}_{T_1\to S_0}$ 与 $f_{\mathrm{osc},S_1}$ 等量子化学标签
+			\item \textbf{模型架构：} 设计并实现 8 层 EGNN\_Sparse\_Network，使用 21 维原子节点特征、6 维键边特征、三维坐标与等变消息传递建模分子几何信息
+			\item \textbf{基线与训练：} 在相同的 4,800/1,050/150 训练/验证/测试划分下，与字符级 SMILES Transformer 基线比较；仅在 EGNN 训练阶段使用旋转/平移数据增强
+			\item \textbf{结果：} 在测试集上，$\Delta E_{S_1-T_1}$、$\mathrm{SOC}_{T_1\to S_1}$、$\mathrm{SOC}_{T_1\to S_0}$ 与 $f_{\mathrm{osc},S_1}$ 的 $R^2$ 分别达到 0.8781、0.6263、0.9855 和 0.7844
+			\item \textbf{结论：} 表明显式三维几何信息与等变归纳偏置能够显著提升孤立分子 RTP 激发态性质预测能力，相比序列模型更适合该类任务
+			\item \textbf{技能：} PyTorch、图神经网络、SE(3) 等变性、量子化学、Python、Linux
+		\end{itemize}
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{本科生科研}{导师：崔林松教授}{2023年秋 -- 2024年秋}
+		\textbf{基于双重态发光机制的发光材料设计与合成}
+		\begin{itemize}
+			\item \textbf{项目：} 参与本科生科研计划，完成课题研究并通过结题考核
+			\item \textbf{分子设计与合成：} 设计 TTM-AnQ 自由基，将 TTM 自由基与 9,10-蒽醌受体偶联；通过 Friedel--Crafts、Suzuki 偶联与氧化反应完成多步有机合成
+			\item \textbf{光谱表征：} 开展 UV-Vis、荧光、循环伏安（CV）与瞬态荧光测试；观察到受体引入后发射峰由 580 nm 红移至 695 nm
+			\item \textbf{关键发现：} 验证 SOMO 能级调控（$-2.82\,\mathrm{eV} \to -3.18\,\mathrm{eV}$），提出区别于传统给体功能化的发射调控思路，并完成受体功能化自由基发光体的探索性研究
+		\end{itemize}
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{本科生竞赛}{数智化赛道}{2024年秋 -- 2025年春}
+		\textbf{多尺度分子模拟驱动的物理化学实验教学创新}
+		\begin{itemize}
+			\item \textbf{框架：} 构建“实验 + 计算”一体化方案，将分子动力学模拟（GROMACS）与 DFT 计算（Gaussian 16, B3LYP/6-31G+g(d,p)）相结合
+			\item \textbf{模拟：} 构建正丁醇/环己烷体系（17:400 与 1:400），在 30°C 下完成能量最小化、平衡与生产模拟，并抽取 100 帧轨迹用于 DFT 计算
+			\item \textbf{结果：} 得到 1.78 D 的预测偶极矩（相对实验值 1.66 D 偏差 6.0\%），并揭示无限稀释外推法的微观来源
+			\item \textbf{奖项：} 获第五届全国大学生化学实验创新设计大赛（数智化赛道）\textbf{华中赛区一等奖}
+		\end{itemize}
+	\end{cvsubsection}
+
+	\begin{cvsubsection}{研究演示}{}{2026年春至今}
+		\textbf{MultiSpec-GeoDiff：光谱驱动的分子结构反演}
+		\begin{itemize}
+			\item \textbf{项目链接：} \href{https://github.com/techandscixie2005/MultiSpec-GeoDiff-Demo}{GitHub}
+			\item \textbf{项目：} 基于 200 条实验 NIST 红外光谱，构建光谱驱动分子结构反演的 Stage-I 可复现验证闭环，引入坐标感知光谱编码与谱距离偏置注意力机制，完成从光谱输入、候选检索到结果可视化的端到端流程
+			\item \textbf{检索与重排序：} 实现候选分子检索、前向光谱重排序、Top-K 结果可视化、可追溯日志输出与 CI 测试流程，形成可运行、可复现的研究 demo
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{奖项与荣誉}
+	\begin{cvsubsection}{}{}{}
+		\begin{itemize}
+			\item \textbf{中国科学技术大学优秀学生奖学金} -- 因学业表现优秀获评（2024、2025）
+			\item \textbf{中国科学技术大学强基计划专项补助} -- 面向前 20\% 学生（2025）
+			\item \textbf{本科生竞赛华中赛区一等奖} -- 第五届全国大学生化学实验创新设计大赛，数智化赛道（2025）
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{学术交流}
+	\begin{cvsubsection}{科研访问}{多个科研院所}{}
+		\begin{itemize}
+			\item \textbf{2023年8月：} 中国科学院大连化学物理研究所、中国科学院长春应用化学研究所、中国科学院金属研究所（沈阳）
+			\item \textbf{2025年8月：} 中国科学院上海有机化学研究所、中国科学院上海硅酸盐研究所、中国科学院苏州纳米技术与纳米仿生研究所
+			\item \textbf{2025年7月：} 香港大学、香港科技大学、香港中文大学、香港城市大学
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{助教经历}
+	\begin{cvsubsection}{课程助教}{}{}
+		\begin{itemize}
+			\item \textbf{2024年秋：} 复变函数（化学类）-- 组织习题讨论课、批改作业并提供一对一辅导
+			\item \textbf{2025年春：} 数学物理方程（B）-- 组织解题训练并编写补充材料
+			\item \textbf{2026年春：} 量子物理 -- 展现扎实的理论基础与课程理解
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{技术技能}
+	\begin{cvsubsection}{编程与工具}{}{}
+		\begin{itemize}
+			\item \textbf{机器学习 / 几何深度学习：} PyTorch、图神经网络、EGNN、张量场网络、SE(3)-Transformer、Transformer 架构
+			\item \textbf{编程与 AI 辅助开发：} Python；Claude Code、Cursor、Codex、OpenCode；AI 辅助编程、智能体式编码与科研原型快速开发
+			\item \textbf{计算化学：} DFT/TD-DFT 计算、量子化学软件（Gaussian、VASP）、分子可视化
+			\item \textbf{数学基础：} 线性代数、群论、概率统计、复变函数
+			\item \textbf{通用工具：} LaTeX、Git、Linux/Unix 命令行、数据分析（numpy、pandas、matplotlib）
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{个人优势}
+	\begin{cvsubsection}{}{}{}
+		\begin{itemize}
+			\item \textbf{扎实的数学基础：} 熟悉理论化学与数学物理核心原理，能够支撑计算化学与 AI4S 建模工作
+			\item \textbf{分析与科研执行能力：} 能够提出研究问题、构建分析路径，并推进复杂科研项目从构想到完成
+			\item \textbf{交叉与协作能力：} 兼具湿实验合成与计算建模经验，具有跨课题组、跨机构合作与交流经历
+			\item \textbf{第一性原理思维与 AI4S 建模：} 能够从物理与数学基础出发分析科学问题，并将几何深度学习、等变建模与 Transformer 架构应用于 AI for Science 场景
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+
+\newpage
+
+% Restore original English header data.
+\name{Xiangyu Xie}
+\address{University of Science and Technology of China \linebreak Department of Chemical Physics, Class of 2026}
+\contacts{Email: \href{mailto:xxy220348@mail.ustc.edu.cn}{xxy220348@mail.ustc.edu.cn} \linebreak Phone: +86 18390703209 \linebreak Website: \linebreak \href{https://techandscixie2005.github.io/portfolio}{techandscixie2005.github.io/portfolio}}
 
 % Print the header
 \makeheader
@@ -46,10 +176,10 @@
 	\begin{cvsubsection}{Undergraduate Thesis}{Supervisor: Prof. Jun Jiang}{Fall 2025 -- Spring 2026}
 		\textbf{Prediction of Room-Temperature Phosphorescence Molecular Properties Based on Equivariant Graph Neural Networks}
 		\begin{itemize}
-			\item \textbf{Dataset \& Targets:} Built a 3D molecular graph pipeline for about 6,000 organic RTP candidate molecules with quantum-chemistry labels for $\Delta E_{S_1-T_1}$, $SOC_{T_1 \to S_1}$, $SOC_{T_1 \to S_0}$, and $f_{\mathrm{osc},S_1}$
+			\item \textbf{Dataset \& Targets:} Built a 3D molecular graph pipeline for about 6,000 organic RTP candidate molecules with quantum-chemistry labels for $\Delta E_{S_1-T_1}$, $\mathrm{SOC}_{T_1\to S_1}$, $\mathrm{SOC}_{T_1\to S_0}$, and $f_{\mathrm{osc},S_1}$
 			\item \textbf{Model Architecture:} Designed and implemented an 8-layer EGNN\_Sparse\_Network using 21-dim atom node features, 6-dim bond edge features, 3D coordinates, and equivariant message passing
 			\item \textbf{Baseline \& Training:} Compared against a character-level SMILES Transformer baseline under the same 4,800/1,050/150 train/validation/test split; applied rotation/translation augmentation only during EGNN training
-			\item \textbf{Results:} Achieved test-set $R^2$ values of 0.8781, 0.6263, 0.9855, and 0.7844 for $\Delta E_{S_1-T_1}$, $SOC_{T_1 \to S_1}$, $SOC_{T_1 \to S_0}$, and $f_{\mathrm{osc},S_1}$, respectively
+			\item \textbf{Results:} Achieved test-set $R^2$ values of 0.8781, 0.6263, 0.9855, and 0.7844 for $\Delta E_{S_1-T_1}$, $\mathrm{SOC}_{T_1\to S_1}$, $\mathrm{SOC}_{T_1\to S_0}$, and $f_{\mathrm{osc},S_1}$, respectively
 			\item \textbf{Conclusion:} Showed that explicit 3D geometry and equivariant inductive bias improved isolated-molecule RTP excited-state property prediction over the sequence baseline
 			\item \textbf{Skills:} PyTorch, Graph Neural Networks, SE(3) Equivariance, Quantum Chemistry, Python, Linux
 		\end{itemize}
@@ -76,7 +206,7 @@
 	\end{cvsubsection}
 
 	\begin{cvsubsection}{Research Demo}{}{Spring 2026 -- Now}
-		\textbf{MultiSpec-GeoDiff: Spectra-Driven Molecular Structure Inversion}
+		\textbf{MultiSpec-GeoDiff: Spectra-Driven Molecular Structure Inversion} \hfill \textbf{GitHub:} \href{https://github.com/techandscixie2005/MultiSpec-GeoDiff-Demo}{GitHub}
 		\begin{itemize}
 			\item \textbf{Project:} Built a runnable Stage-I feasibility loop for spectra-driven molecular structure inversion using 200 experimental NIST IR spectra with coordinate-aware spectral encoding and spectral-distance-bias attention
 			\item \textbf{Retrieval \& Reranking:} Developed candidate retrieval, forward-spectrum reranking, Top-K visualization, traceable outputs, and CI-tested reproducible demo workflow
