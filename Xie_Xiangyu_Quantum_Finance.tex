@@ -1,0 +1,124 @@
+%% Xie Xiangyu resume customized for Mengxi Investment AI Lab / Quantum Finance
+%% Compile with:
+%% latexmk -xelatex -interaction=nonstopmode -halt-on-error -jobname="谢翔宇-Quantum Finance" Xie_Xiangyu_Quantum_Finance.tex
+
+\documentclass[]{mcdowellcv}
+
+\usepackage{amsmath}
+\usepackage{xeCJK}
+\setCJKmainfont[AutoFakeBold=2.5]{SimSun}
+\setCJKsansfont[AutoFakeBold=2.5]{Microsoft YaHei}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\emergencystretch=2em
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=false,
+    pdfborder={0 0 0},
+    pdfauthor={Xiangyu Xie},
+    pdftitle={谢翔宇-Quantum Finance}
+}
+
+\geometry{left=0.58in,top=0.48in,right=0.58in,bottom=0.50in}
+\setlist{leftmargin=*, noitemsep, topsep=0pt, parsep=0pt, partopsep=0pt}
+
+\name{谢翔宇}
+\address{中国科学技术大学 \linebreak 化学物理系，2026届本科生 \linebreak AI 算法研究员（实习）}
+\contacts{邮箱：\href{mailto:xxy220348@mail.ustc.edu.cn}{xxy220348@mail.ustc.edu.cn} \linebreak 电话：+86 18390703209 \linebreak 主页：\href{https://techandscixie2005.github.io/portfolio}{Portfolio} \linebreak GitHub：\href{https://github.com/techandscixie2005}{techandscixie2005}}
+
+\begin{document}
+\makeheader
+
+\begin{cvsection}{基本信息与申请方向}
+    \begin{cvsubsection}{}{}{}
+        中科大化学物理本科生，具有物理与数学背景，主要研究方向为 AI for Science、几何深度学习与深度学习分子性质预测。熟悉 PyTorch、Transformer、图神经网络与可复现科研工程流程，希望将科学机器学习中的表征学习、复杂数据建模与模型验证经验迁移到量化金融 AI Lab 场景。
+        \begin{itemize}
+            \item \textbf{申请方向：} AI 算法研究员（实习）/ Machine Learning Research Intern；关注深度学习、Transformer、几何深度学习、表征学习、科学机器学习、数据驱动建模与 AI for Quant / Quantum Finance。
+            \item \textbf{迁移定位：} 具备将机器学习、深度学习与统计建模方法迁移至量化金融问题的学习能力与研究潜力，希望面向历史数据建模、特征/因子挖掘、模型验证与策略研究问题开展研究。
+        \end{itemize}
+    \end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{教育背景}
+    \begin{cvsubsection}{合肥，中国}{中国科学技术大学，化学物理系}{2022年秋 -- 预计2026年春}
+        \begin{itemize}
+            \item \textbf{本科：} 2026届本科生；\textbf{GPA：} 3.23/4.3，成绩持续上升：大一 2.6，大二 3.4，大三 3.5。
+            \item \textbf{导师：} 江俊教授，计算化学与 AI for Science 方向。
+            \item \textbf{相关课程：} 量子力学、统计力学、数学物理方程、高等量子力学、量子化学、线性代数、复变函数、概率统计、群论基础。
+        \end{itemize}
+    \end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{机器学习与科研项目经历}
+    \begin{cvsubsection}{可复现研究 Demo}{}{2026年春至今}
+        \textbf{MultiSpec-GeoDiff：光谱驱动的分子结构反演可复现 Demo}
+        \begin{itemize}
+            \item 基于 200 条实验 NIST 红外光谱，构建光谱驱动分子结构反演的 Stage-I 可复现验证闭环。
+            \item 实现光谱编码、候选检索、前向光谱重排序、Top-K 结果可视化与可追溯日志输出。
+            \item 引入坐标感知光谱编码与谱距离偏置注意力机制，探索从实验观测到结构候选的反演流程。
+            \item 建立 CI 测试与可复现实验脚本，形成可运行的 GitHub demo：\href{https://github.com/techandscixie2005/MultiSpec-GeoDiff-Demo}{techandscixie2005/MultiSpec-GeoDiff-Demo}。
+        \end{itemize}
+    \end{cvsubsection}
+
+    \begin{cvsubsection}{本科毕业论文}{}{2025年秋 -- 2026年春}
+        \textbf{基于等变图神经网络的分子性质预测：面向复杂结构数据的深度学习建模}
+        \begin{itemize}
+            \item 面向约 6,000 个有机分子样本，构建包含三维结构、节点/边特征与量子化学标签的数据处理流程。
+            \item 设计并实现 8 层 EGNN\_Sparse\_Network，利用三维坐标与等变消息传递建模复杂结构数据。
+            \item 与字符级 SMILES Transformer 基线在统一 4,800/1,050/150 训练/验证/测试划分下对比，系统评估几何归纳偏置与序列模型的差异。
+            \item 在测试集上取得 $R^2 = 0.8781 / 0.6263 / 0.9855 / 0.7844$，体现对多任务连续变量预测的建模能力。
+            \item 该项目体现了从数据构建、模型实现、基线对比、指标评估到结论分析的完整机器学习研究流程。
+        \end{itemize}
+    \end{cvsubsection}
+
+    \begin{cvsubsection}{本科生科研}{}{2023年秋 -- 2024年秋}
+        \textbf{基于双重态发光机制的发光材料设计与合成}
+        \begin{itemize}
+            \item 完成本科生科研项目，参与分子设计、合成与光谱表征，并通过结题考核。
+            \item 训练了科研问题拆解、实验验证与跨学科协作能力；在本版本中作为科学研究训练经历呈现。
+        \end{itemize}
+    \end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{数理与算法基础}
+    \begin{cvsubsection}{}{}{}
+        \begin{itemize}
+            \item \textbf{数学与物理：} 量子力学、统计力学、线性代数、复变函数、数学物理方程、概率统计、群论基础、张量表示与对称性思想。
+            \item \textbf{模型理解：} 熟悉 Transformer 基本架构与注意力机制，能够围绕序列建模、表征学习与多模态建模开展模型设计与实验验证。
+            \item \textbf{几何深度学习：} 了解等变图神经网络、SE(3) 对称性与张量表示学习，具备从数学结构出发设计机器学习模型的能力。
+        \end{itemize}
+    \end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{编程与工程能力}
+    \begin{cvsubsection}{}{}{}
+        \begin{itemize}
+            \item \textbf{机器学习实现：} Python、PyTorch、NumPy、pandas、matplotlib；数据处理、模型训练、实验日志、指标评估与结果可视化。
+            \item \textbf{工程工具：} Linux/Unix 命令行、Git/GitHub、LaTeX；具备 CI 测试、可复现实验脚本与研究 demo 交付经验。
+            \item \textbf{AI 辅助科研开发：} Claude Code、Codex、Cursor、OpenCode；具备从论文阅读、问题拆解、代码实现、实验设计、日志追踪到结果可视化的完整研究工程化能力。
+        \end{itemize}
+    \end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{奖项与科研经历}
+    \begin{cvsubsection}{}{}{}
+        \begin{itemize}
+            \item \textbf{中国科学技术大学优秀学生奖学金}（2024、2025）
+            \item \textbf{中国科学技术大学强基计划专项补助}（2025）
+            \item \textbf{第五届全国大学生化学实验创新设计大赛华中赛区一等奖}（2025），数智化赛道
+        \end{itemize}
+    \end{cvsubsection}
+\end{cvsection}
+
+\begin{cvsection}{个人优势}
+    \begin{cvsubsection}{}{}{}
+        \begin{itemize}
+            \item \textbf{第一性原理思维：} 能够从物理、数学与数据结构出发拆解复杂建模问题，并转化为可执行的机器学习方案。
+            \item \textbf{研究到代码：} 能阅读论文、建立基线、运行实验、分析误差并形成可复现实验闭环。
+            \item \textbf{诚实迁移：} 目前无正式金融项目经历，但具备将 AI for Science 中的表征学习、统计建模与模型验证方法迁移到金融时间序列、因子挖掘与策略研究场景的学习能力。
+        \end{itemize}
+    \end{cvsubsection}
+\end{cvsection}
+
+\end{document}
