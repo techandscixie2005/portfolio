@@ -1,0 +1,26 @@
+title: Xiangyu Xie - Ph.D. Student at USTC
+description: AI for Science, molecular machine learning, and evidence-grounded scientific agents. Advisor Prof. Jun Jiang. Sep 2026 - Present.
+url: https://techandscixie2005.github.io
+baseurl: /portfolio
+# GitHub Pages branch builds must not publish authoring files or local records.
+exclude:
+    - README.md
+    - AGENTS.md
+    - scripts
+    - docs
+    - work
+    - outputs
+    - node_modules
+    - '*.tex'
+    - '*.cls'
+    - '*.aux'
+    - '*.log'
+    - '*.out'
+    - '*.bak*'
+    - '*.synctex*'
+    - '*.fdb_latexmk'
+    - '*.fls'
+    - '*.xdv'
+    - '*Zone.Identifier*'
+    - '*.md'
+    - '谢*.pdf'

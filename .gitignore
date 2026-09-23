@@ -1,1 +1,32 @@
-.omx/
+# Keep local notes, research records, old drafts, and TeX byproducts private.
+# Only these intentional source/delivery files may be added to this repository.
+/*
+!/.gitignore
+!/_config.yml
+!/README.md
+!/index.html
+!/styles.css
+!/script.js
+!/theme.js
+!/Xie_Xiangyu_Resume.tex
+!/Xie_Xiangyu_Resume.pdf
+!/sitemap.xml
+!/robots.txt
+!/assets/
+/assets/*
+!/assets/favicon.svg
+!/assets/social-card.png
+!/assets/quantum-agent-20260918.webp
+!/details/
+/details/*
+!/details/research-quantum-agent.html
+!/details/research-egnn.html
+!/details/research-chem-experiment.html
+!/details/research-doublet-emissive.html
+!/details/teaching-quantum.html
+!/details/teaching-math-physics.html
+!/details/teaching-complex-analysis.html
+!/details/award-scholarship.html
+!/scripts/
+/scripts/*
+!/scripts/site.py

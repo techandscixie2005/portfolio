@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://techandscixie2005.github.io/portfolio/sitemap.xml

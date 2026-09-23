@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="color-scheme" content="light dark" />
+        <title>QuantumAgent | Xiangyu Xie · Ph.D. Student at USTC</title>
+        <meta
+            name="description"
+            content="An evidence-grounded quantum physics teaching agent that connects learner reasoning, course sources, and verifiable scientific computation. Xiangyu Xie is a Ph.D. student at USTC, advised by Prof. Jun Jiang (Sep 2026 – Present). Research: AI for Science, molecular machine learning, and scientific agents."
+        />
+        <link
+            rel="canonical"
+            href="https://techandscixie2005.github.io/portfolio/details/research-quantum-agent.html"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="QuantumAgent | Xiangyu Xie" />
+        <meta
+            property="og:description"
+            content="An evidence-grounded quantum physics teaching agent that connects learner reasoning, course sources, and verifiable scientific computation. Xiangyu Xie is a Ph.D. student at USTC, advised by Prof. Jun Jiang (Sep 2026 – Present). Research: AI for Science, molecular machine learning, and scientific agents."
+        />
+        <meta
+            property="og:url"
+            content="https://techandscixie2005.github.io/portfolio/details/research-quantum-agent.html"
+        />
+        <meta
+            property="og:image"
+            content="https://techandscixie2005.github.io/portfolio/assets/social-card.png"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta
+            property="og:image:alt"
+            content="Xiangyu Xie — Ph.D. Student at USTC. AI for Science, Molecular Machine Learning, Scientific Agents."
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+        <script src="../theme.js"></script>
+        <link rel="stylesheet" href="../styles.css" />
+    </head>
+    <body>
+        <a class="skip-link" href="#main-content">Skip to content</a>
+        <header class="site-header">
+            <div class="shell header-inner">
+                <a class="wordmark" href="../index.html"
+                    ><span class="monogram" aria-hidden="true">X.</span> Xiangyu Xie</a
+                >
+                <div class="nav-controls">
+                    <button class="menu-toggle" hidden aria-expanded="false" aria-controls="site-nav">
+                        Menu
+                    </button>
+                    <nav id="site-nav" aria-label="Main navigation">
+                        <a href="../index.html#work">Work</a><a href="../index.html#about">About</a
+                        ><a href="../Xie_Xiangyu_Resume.pdf">CV <span aria-hidden="true">↗</span></a
+                        ><a href="../index.html#contact">Contact</a>
+                    </nav>
+                    <button class="theme-toggle" hidden aria-label="Switch to dark theme">
+                        <span aria-hidden="true">◐</span><span class="theme-label">Dark</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <script src="../script.js"></script>
+        <main id="main-content" class="shell case-main">
+            <a class="back-link" href="../index.html#work">← Portfolio</a>
+            <header class="case-header">
+                <p class="eyebrow">Scientific agents / Selected work 01</p>
+                <h1>QuantumAgent</h1>
+                <p class="case-summary">
+                    An evidence-grounded quantum physics teaching agent that connects learner reasoning,
+                    course sources, and verifiable scientific computation.
+                </p>
+                <dl class="case-facts">
+                    <div>
+                        <dt>Role</dt>
+                        <dd>Independent Developer / Solo Entrant</dd>
+                    </div>
+                    <div>
+                        <dt>Period</dt>
+                        <dd>2026</dd>
+                    </div>
+                    <div>
+                        <dt>Project type</dt>
+                        <dd>Completed competition prototype</dd>
+                    </div>
+                </dl>
+                <div class="actions">
+                    <a class="button primary" href="https://github.com/techandscixie2005/Quantum-Agent"
+                        >View Source <span aria-hidden="true">↗</span></a
+                    ><a
+                        class="button"
+                        href="https://github.com/techandscixie2005/Quantum-Agent/blob/main/docs/implementation/evidence/video-parity-flash-20260918/main-raw.webm"
+                        >Recorded Demo <span aria-hidden="true">↗</span></a
+                    ><a class="text-link" href="https://www.teach.ustc.edu.cn/notice/notice-info/20582.html"
+                        >Award Announcement <span aria-hidden="true">↗</span></a
+                    >
+                </div>
+            </header>
+            <div class="case-body">
+                <section class="case-section">
+                    <h2>The teaching problem</h2>
+                    <p>
+                        A fluent answer is not enough to show that a learner understands quantum physics.
+                        Sources, calculations, and the learner’s own reasoning need to remain visible. I built
+                        QuantumAgent to connect these elements in a staged teaching workflow.
+                    </p>
+                </section>
+                <section class="case-section">
+                    <h2>What I built</h2>
+                    <div class="contribution-grid">
+                        <article>
+                            <span class="eyebrow">01 / Teaching</span>
+                            <h3>A staged learning workflow</h3>
+                            <p>
+                                Initial attempts lead into diagnosis, guided work, teach-back, transfer, and
+                                independent problem solving. Backend stage rules constrain progression.
+                            </p>
+                        </article>
+                        <article>
+                            <span class="eyebrow">02 / Evidence</span>
+                            <h3>Traceable course retrieval</h3>
+                            <p>
+                                Retrieved passages retain source, page, and version information so an answer
+                                can be checked against course material.
+                            </p>
+                        </article>
+                        <article>
+                            <span class="eyebrow">03 / Computation</span>
+                            <h3>Generated code with checks</h3>
+                            <p>
+                                A pipeline applies AST checks, isolated execution, and independent numerical
+                                validation for the finite rectangular barrier case.
+                            </p>
+                        </article>
+                        <article>
+                            <span class="eyebrow">04 / Continuity</span>
+                            <h3>Recoverable learning records</h3>
+                            <p>
+                                Attempts, evidence, calculation results, and workflow snapshots persist so a
+                                learning session can be resumed.
+                            </p>
+                        </article>
+                    </div>
+                </section>
+                <section class="case-section">
+                    <h2>How the system fits together</h2>
+                    <figure class="workflow">
+                        <figcaption>Teaching stages, supported by evidence and computation</figcaption>
+                        <ol class="stage-flow">
+                            <li>Initial attempt</li>
+                            <li>Diagnosis</li>
+                            <li>Guided work</li>
+                            <li>Teach-back</li>
+                            <li>Transfer</li>
+                            <li>Solo</li>
+                        </ol>
+                        <div class="workflow-support">
+                            <div>
+                                <h3>Course evidence</h3>
+                                <p>Approved material → retrieval → source passages</p>
+                            </div>
+                            <div>
+                                <h3>Scientific tools</h3>
+                                <p>Generated code → AST checks → isolated execution → numerical validation</p>
+                            </div>
+                        </div>
+                        <div class="workflow-record">
+                            <strong>Persistent learning records & checkpoints</strong>
+                            <p>
+                                Save attempts, sources, tool results, and stage state → recover the workflow.
+                            </p>
+                        </div>
+                    </figure>
+                    <p>
+                        The React/TypeScript workbench connects to the Python/FastAPI/LangGraph backend.
+                        PostgreSQL holds the authoritative records; pgvector and Neo4j support derived
+                        retrieval indexes, with Redis for temporary coordination and caching. Scientific tools
+                        include NumPy, SciPy, and SymPy.
+                    </p>
+                </section>
+                <section class="case-section" id="demo">
+                    <h2>A real, recorded demonstration</h2>
+                    <figure class="demo-figure">
+                        <a href="../assets/quantum-agent-20260918.webp"
+                            ><img
+                                src="../assets/quantum-agent-20260918.webp"
+                                width="1366"
+                                height="768"
+                                loading="lazy"
+                                alt="Historical QuantumAgent screen with code execution records and a finite rectangular barrier transmission calculation."
+                        /></a>
+                        <figcaption>
+                            Historical acceptance screenshot · 18 Sep 2026 · Finite rectangular barrier. The
+                            displayed PASS belongs to that recorded run.
+                        </figcaption>
+                    </figure>
+                    <p>
+                        The public recording follows the barrier teaching workflow. It is a historical
+                        demonstration with test-driven inputs, not a study of student learning outcomes. Open
+                        the recording on demand; this page does not load or autoplay video.
+                    </p>
+                    <div class="actions">
+                        <a
+                            class="button"
+                            href="https://github.com/techandscixie2005/Quantum-Agent/blob/main/docs/implementation/evidence/video-parity-flash-20260918/main-raw.webm"
+                            >Recorded Demo <span aria-hidden="true">↗</span></a
+                        ><a
+                            class="text-link"
+                            href="https://github.com/techandscixie2005/Quantum-Agent/blob/main/docs/implementation/VIDEO_PARITY_ACCEPTANCE.md"
+                            >Historical Acceptance Report <span aria-hidden="true">↗</span></a
+                        >
+                    </div>
+                </section>
+                <section class="case-section">
+                    <h2>Award & evidence</h2>
+                    <div class="award-callout">
+                        <p class="eyebrow">Sep 2026 / USTC “107 Cup”</p>
+                        <h3>Second Prize<br />Graduate Division, Agent Track</h3>
+                        <p>
+                            Computing Power and Agent Development Competition. QuantumAgent was independently
+                            developed and entered by Xiangyu Xie as the sole team member.
+                        </p>
+                        <a
+                            class="text-link"
+                            href="https://www.teach.ustc.edu.cn/notice/notice-info/20582.html"
+                            >Award Announcement <span aria-hidden="true">↗</span></a
+                        >
+                    </div>
+                    <p>
+                        The USTC notice published on 20 Sep 2026 lists QuantumAgent and 谢翔宇. The
+                        competition name above is an English rendering, not an official English title.
+                    </p>
+                    <ul class="source-list">
+                        <li>
+                            <a class="text-link" href="https://github.com/techandscixie2005/Quantum-Agent"
+                                >View Source <span aria-hidden="true">↗</span></a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="text-link"
+                                href="https://github.com/techandscixie2005/Quantum-Agent/blob/main/services/api/quantum_agent/coding/agent.py"
+                                >Code checking and execution pipeline <span aria-hidden="true">↗</span></a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="text-link"
+                                href="https://github.com/techandscixie2005/Quantum-Agent/blob/main/services/api/quantum_agent/science/barrier_reference.py"
+                                >Independent barrier reference <span aria-hidden="true">↗</span></a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                class="text-link"
+                                href="https://github.com/techandscixie2005/Quantum-Agent/blob/main/docs/implementation/VIDEO_PARITY_ACCEPTANCE.md"
+                                >Historical acceptance and recovery evidence
+                                <span aria-hidden="true">↗</span></a
+                            >
+                        </li>
+                    </ul>
+                </section>
+                <section class="case-section">
+                    <h2>Scope & limits</h2>
+                    <p>
+                        <strong>Completed competition prototype.</strong> The available evidence mainly covers
+                        a finite rectangular barrier case. It does not establish reliability for arbitrary
+                        quantum problems, a full course, or long-term teaching effectiveness. The system uses
+                        existing models and depends on external services and a configured execution
+                        environment; no stable public live service is offered here.
+                    </p>
+                </section>
+            </div>
+            <aside class="author-note">
+                <p class="eyebrow">About the author</p>
+                <p>
+                    Xiangyu Xie is a Ph.D. student at USTC, advised by Prof. Jun Jiang (Sep 2026 – Present).
+                    Research: AI for Science, molecular machine learning, and scientific agents.
+                </p>
+                <a href="../Xie_Xiangyu_Resume.pdf">Download English CV ↗</a>
+            </aside>
+            <nav class="related-work" aria-label="More selected work">
+                <a href="research-quantum-agent.html">QuantumAgent ↗</a
+                ><a href="research-egnn.html">EGNN for RTP ↗</a
+                ><a href="../index.html#work">All selected work ↗</a>
+            </nav>
+        </main>
+        <footer class="site-footer shell">
+            <p>© 2026 Xiangyu Xie</p>
+            <p>AI for Science · USTC</p>
+            <a href="../Xie_Xiangyu_Resume.pdf">English CV (PDF) ↗</a>
+        </footer>
+    </body>
+</html>
