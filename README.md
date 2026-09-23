@@ -27,7 +27,7 @@ Python 3.9+ is sufficient; the static site has no package dependencies or fronte
 python scripts/site.py --port 8000
 ```
 
-Open [http://127.0.0.1:8000/portfolio/](http://127.0.0.1:8000/portfolio/). Detail pages can be opened directly, for example `/portfolio/details/research-quantum-agent.html`. The preview serves an explicit allowlist and returns 404 for local authoring records. Do not expose a generic HTTP server over the entire working directory if it contains private notes.
+Open [http://127.0.0.1:8000/portfolio/](http://127.0.0.1:8000/portfolio/). Detail pages can be opened directly, for example `/portfolio/details/research-quantum-agent.html`. The preview supports single byte-range requests for the MP4 and serves an explicit allowlist and returns 404 for local authoring records. Do not expose a generic HTTP server over the entire working directory if it contains private notes.
 
 To generate public-only files in a **new directory outside this repository**:
 
@@ -41,27 +41,28 @@ The exporter refuses to overwrite an existing directory. The exported directory 
 
 The site is designed for `https://techandscixie2005.github.io/portfolio/`, with relative asset and download links. Existing branch/root Pages publishing can be retained; `_config.yml` excludes authoring materials from Jekyll output. Alternatively, use the explicit public export as the Pages artifact. Review changes before committing or publishing. `.gitignore` uses an allowlist so local research records and backup files are not accidentally added; extend it deliberately when adding public assets.
 
-All CV links use `Xie_Xiangyu_Resume.pdf`. Static HTML remains readable without JavaScript; JS only enhances theme selection, mobile navigation, and email copying. No remote fonts, icon libraries, tracking scripts, forms, or backend are required.
+All CV links use `Xie_Xiangyu_Resume.pdf`. Static HTML remains readable without JavaScript; JS enhances theme selection, mobile navigation, email copying, and on-demand video loading. No remote fonts, icon libraries, tracking scripts, forms, or backend are required.
 
 ## CV compilation
 
-`Xie_Xiangyu_Resume.tex` uses the standard `article` class and TeX Live packages (`geometry`, `lmodern`, `microtype`, `enumitem`, `titlesec`, `xcolor`, `amsmath`, `fancyhdr`, `hyperref`). It no longer requires a custom CV class, Chinese font configuration, or bundled fonts.
+`Xie_Xiangyu_Resume.tex` uses the standard `article` class and TeX Live packages (`geometry`, `lmodern`, `microtype`, `enumitem`, `titlesec`, `xcolor`, `amsmath`, `fancyhdr`, `lastpage`, `hyperref`). It no longer requires a custom CV class, Chinese font configuration, or bundled fonts.
 
-Run twice from the repository root:
+Create a private build directory outside the repository, then run twice from the repository root:
 
 ```sh
-xelatex -interaction=nonstopmode -halt-on-error Xie_Xiangyu_Resume.tex
-xelatex -interaction=nonstopmode -halt-on-error Xie_Xiangyu_Resume.tex
+mkdir ../portfolio-cv-build
+xelatex -interaction=nonstopmode -halt-on-error -output-directory=../portfolio-cv-build Xie_Xiangyu_Resume.tex
+xelatex -interaction=nonstopmode -halt-on-error -output-directory=../portfolio-cv-build Xie_Xiangyu_Resume.tex
 ```
 
-Use `-output-directory=<existing private build directory>` to keep auxiliary files outside the repository, then copy the newly compiled PDF to the root. The PDF is an intended deliverable and should be included in a future reviewed commit. Render every page and check extracted text after changes. The target is a readable two-page English CV.
+Use `-output-directory=<existing private build directory>` to keep auxiliary files outside the repository, then copy the newly compiled PDF to the root. The PDF is an intended deliverable and should be included in a future reviewed commit. Render every page and check extracted text after changes. The target is a readable two-page English CV; the footer uses `LastPage` rather than a fixed total.
 
 ## Sources and assets
 
 - [QuantumAgent source and current architecture](https://github.com/techandscixie2005/Quantum-Agent): Python/FastAPI/LangGraph backend and React/TypeScript workbench.
 - [USTC award notice, published 20 Sep 2026](https://www.teach.ustc.edu.cn/notice/notice-info/20582.html): Graduate Division, Agent Track, Second Prize; QuantumAgent; Xiangyu Xie as sole listed member. The competition’s English name is a descriptive translation.
 - [Historical screenshot, 18 Sep 2026](https://raw.githubusercontent.com/techandscixie2005/Quantum-Agent/main/docs/implementation/evidence/video-parity-flash-20260918/1366-verify.png): locally encoded as WebP with the original dimensions and content. Visible outcomes belong to the recorded run.
-- [Recorded demonstration](https://github.com/techandscixie2005/Quantum-Agent/blob/main/docs/implementation/evidence/video-parity-flash-20260918/main-raw.webm) and [historical acceptance report](https://github.com/techandscixie2005/Quantum-Agent/blob/main/docs/implementation/VIDEO_PARITY_ACCEPTANCE.md): external, click-to-open, no autoplay.
+- [Full recorded demonstration](details/research-quantum-agent.html#demo): native video, loaded only after pressing Play; H.264 MP4, 1920 × 1080, 2:20, no audio, no edits. The poster is the real screenshot above. [Original WebM at source commit 68fd4cd](https://raw.githubusercontent.com/techandscixie2005/Quantum-Agent/68fd4cdaf4169be40863dfd0b3bed096d885b03e/docs/implementation/evidence/video-parity-flash-20260918/main-raw.webm) and [historical acceptance report](https://github.com/techandscixie2005/Quantum-Agent/blob/main/docs/implementation/VIDEO_PARITY_ACCEPTANCE.md) remain secondary evidence. Download links work without JavaScript; playback errors offer retry. `demo.js` and the specific MP4 path are included in both Git and public-export allowlists.
 - [Prof. Jun Jiang’s official page](https://faculty.ustc.edu.cn/jiangjun1/en/): advisor name/link only.
 - Other project results are summaries of the author’s existing thesis/CV and project records. No new experiments or model evaluation are claimed. Dipole comparison contexts are distinguished; no ambiguous derived error percentage is displayed.
 - The molecular graph SVG is a conceptual illustration, not experimental data. The favicon and 1200 × 630 social card are local original text/geometry assets. System fonts provide fallbacks; no font files are distributed.

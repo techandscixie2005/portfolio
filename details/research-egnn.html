@@ -111,7 +111,7 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Target property</th>
-                                    <th scope="col">R²</th>
+                                    <th scope="col">EGNN R²</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -135,9 +135,7 @@
                         </table>
                     </div>
                     <p class="caption">
-                        Source: undergraduate thesis summary and CV records. These results have not been
-                        recomputed for this portfolio; raw predictions and uncertainty estimates are not
-                        presented here.
+                        Source: <a href="../Xie_Xiangyu_Resume.pdf">author’s undergraduate research summary (CV)</a>.
                     </p>
                 </section>
                 <section class="case-section">
@@ -192,20 +190,19 @@
                         <li>Rotation and translation augmentation was applied only during EGNN training.</li>
                     </ul>
                     <p>
-                        The thesis summary reports improvement over the sequence baseline across the four
-                        targets. The weakest EGNN result is SOC(T₁→S₁), which remains a challenge for this
-                        representation.
+                        The lowest reported EGNN R² is for SOC(T₁→S₁), at 0.6263.
                     </p>
                 </section>
                 <section class="case-section">
-                    <h2>Scope & evidence</h2>
+                    <h2>Scope &amp; Limitations</h2>
                     <p>
-                        The targets describe isolated molecules. They are not direct predictions of
-                        solid-state device performance, experimental quantum yield, or phosphorescence
-                        lifetime. Crystal packing and intermolecular effects are outside this evaluation. No
-                        public code or raw-data release is linked for this thesis.
+                        These isolated-molecule targets do not directly predict solid-state device performance,
+                        experimental quantum yield, or phosphorescence lifetime; crystal packing and
+                        intermolecular effects are outside this evaluation. Public baseline scores, raw
+                        predictions, and uncertainty estimates are unavailable, so the reported EGNN results
+                        do not establish the magnitude or consistency of improvement over the baseline.
                     </p>
-                    <a class="text-link" href="../Xie_Xiangyu_Resume.pdf">Research summary in CV ↗</a>
+                    <a class="text-link" href="../Xie_Xiangyu_Resume.pdf">Author’s research summary in CV ↗</a>
                 </section>
             </div>
             <aside class="author-note">

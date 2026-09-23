@@ -1102,3 +1102,16 @@ td {
         animation: none !important;
     }
 }
+
+/* Full recording retains its original aspect ratio at every viewport. */
+.demo-figure video {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background: #101719;
+}
+#demo-play:disabled {
+    cursor: progress;
+    opacity: .7;
+}
