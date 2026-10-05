@@ -48,7 +48,7 @@ Advisor: Prof. Jun Jiang\enspace |\enspace Sep 2026 -- Present\par
 Ph.D. Student\enspace |\enspace Sep 2026 -- Present\\
 Advisor: \href{https://faculty.ustc.edu.cn/jiangjun1/en/}{Prof. Jun Jiang}\par
 Undergraduate studies in Chemical Physics\enspace |\enspace From Fall 2022\\
-{\small Undergraduate thesis: Fall 2025 -- Spring 2026; supervised by Prof. Jun Jiang.}
+{\small Undergraduate thesis completed 1 May 2026; supervised by Prof. Jun Jiang.}
 
 \section{Selected Research \& Projects}
 \textbf{\href{https://github.com/techandscixie2005/Quantum-Agent}{QuantumAgent}}\hfill 2026\\
@@ -56,7 +56,7 @@ Undergraduate studies in Chemical Physics\enspace |\enspace From Fall 2022\\
 {\small Independent Developer\enspace |\enspace Completed competition prototype}\par
 {\small\textbf{Second Prize, Graduate Division} $\cdot$ Agent Track, USTC ``107 Cup'' (Sep 2026) --- Solo entrant.}
 \begin{itemize}
-    \item Independently built a workflow-driven quantum physics teaching agent with a React/TypeScript workbench and a FastAPI/LangGraph backend, integrating course-grounded retrieval and scientific tools.
+    \item Inspired by my Spring 2026 Quantum Physics teaching assistantship, independently built a teaching agent with a React/TypeScript workbench and a FastAPI/LangGraph backend, integrating course-grounded retrieval and scientific tools.
     \item Implemented source-traceable retrieval and a generated-code pipeline with AST checks, isolated execution, and independent numerical validation for a finite rectangular barrier case study.
     \item Developed staged learning interactions spanning initial attempts, diagnosis, teach-back, transfer, and independent problem solving, with persistent learning records and recoverable workflow state.
 \end{itemize}
@@ -66,7 +66,7 @@ Undergraduate studies in Chemical Physics\enspace |\enspace From Fall 2022\\
     \item Built a 3D molecular graph pipeline for approximately 6,000 organic room-temperature phosphorescence (RTP) candidate molecules with quantum-chemistry labels.
     \item Implemented an eight-layer EGNN with 21-dimensional atom features and six-dimensional bond features. Compared with a character-level SMILES Transformer on the same 4,800/1,050/150 train/validation/test split.
     \item Reported test-set $R^2$ on \textbf{150 molecules}: 0.8781 for $\Delta E_{S_1-T_1}$; 0.6263 for $\mathrm{SOC}_{T_1\to S_1}$; 0.9855 for $\mathrm{SOC}_{T_1\to S_0}$; and 0.7844 for $f_{\mathrm{osc},S_1}$.
-    \item Studied isolated-molecule excited-state properties; these results do not directly predict solid-state device performance, quantum yield, or phosphorescence lifetime.
+    \item Reduced test RMSE versus the lightweight SMILES Transformer by 56.1\%, 29.8\%, 32.2\%, and 25.9\%, respectively; singlet--triplet gap RMSE was 0.1248 eV. Targets describe isolated-molecule excited-state properties.
 \end{itemize}
 
 \newpage
@@ -74,19 +74,20 @@ Undergraduate studies in Chemical Physics\enspace |\enspace From Fall 2022\\
 \entry{Multiscale Molecular Simulation}{Fall 2024 -- Spring 2025}{Undergraduate Competition Project\enspace |\enspace Digital Intelligence Track}
 \begin{itemize}
     \item Built an experiment-and-computation workflow combining GROMACS molecular dynamics with Gaussian 16 DFT calculations for n-butanol/cyclohexane systems (17:400 and 1:400).
-    \item Sampled 100 trajectory frames from the dilute system for electronic-structure calculations; the project report gives a mean calculated dipole moment of 1.78 D.
+    \item Sampled 100 trajectory frames from the dilute system for DFT calculations; obtained a mean dipole moment of 1.78 D, a 6.0\% deviation from the measured 1.68 D.
     \item Used molecular environments to interpret infinite-dilution extrapolation in a physical chemistry teaching experiment; received First Prize, Central China Division, in 2025.
 \end{itemize}
 \vspace{4pt}
 \entry{Doublet-Emissive Molecular Design}{Fall 2023 -- Fall 2024}{Undergraduate Research\enspace |\enspace Supervisor: Prof. Linsong Cui}
 \begin{itemize}
     \item Designed and synthesized TTM-AnQ, coupling a TTM radical framework with a 9,10-anthraquinone acceptor through Friedel--Crafts chemistry, Suzuki coupling, and oxidation.
-    \item Performed UV--Vis, fluorescence, cyclic voltammetry, and transient fluorescence characterization; observed an emission shift from 580 to 695 nm.
+    \item Performed UV--Vis, fluorescence, and cyclic voltammetry characterization; observed an emission shift from 580 to 695 nm. Completed the Undergraduate Research Program report on 12 Dec 2024.
     \item Estimated SOMO energies of $-2.82$ and $-3.18$ eV for TTM and TTM-AnQ, respectively, supporting an exploratory study of acceptor-functionalized radical emitters.
 \end{itemize}
 
 \section{Awards and Honors}
 \begin{itemize}
+    \item \href{https://www.teach.ustc.edu.cn/?attachment_id=20606}{\textbf{USTC Outstanding Teaching Assistant}} -- Spring 2026, ranked 1st (awarded Sep 2026).
     \item \href{https://www.teach.ustc.edu.cn/notice/notice-info/20582.html}{\textbf{Second Prize, Graduate Division, Agent Track}} -- USTC ``107 Cup'' Computing Power and Agent Development Competition; QuantumAgent, sole team member (Sep 2026).
     \item \textbf{First Prize, Central China Division} -- 5th National Undergraduate Chemistry Experiment Innovation Design Competition, Digital Intelligence Track (2025).
     \item \textbf{USTC Outstanding Student Scholarship} (2024, 2025).
@@ -96,14 +97,14 @@ Undergraduate studies in Chemical Physics\enspace |\enspace From Fall 2022\\
 \section{Teaching Experience}
 \textbf{Teaching Assistant, USTC}
 \begin{itemize}
-    \item \textbf{Quantum Physics} -- Spring 2026.
+    \item \textbf{Quantum Physics} -- Spring 2026. Ranked 1st, USTC Outstanding Teaching Assistant; this teaching experience directly inspired QuantumAgent.
     \item \textbf{Mathematical Physics Equations (B)} -- Spring 2025. Facilitated problem-solving sessions and developed supplementary materials.
     \item \textbf{Complex Functions (for Chemistry)} -- Fall 2024. Led discussion sections, graded assignments, and provided one-on-one tutoring.
 \end{itemize}
 
 \section{Technical Skills}
-\textbf{Molecular learning:} Python, PyTorch, EGNNs, molecular graphs, Transformer baselines.\\
+\textbf{Molecular learning:} Python, PyTorch Geometric, RDKit, EGNNs, Transformer baselines.\\
 \textbf{Scientific software:} React/TypeScript, FastAPI, LangGraph, PostgreSQL, Git, Linux.\\
-\textbf{Chemistry \& analysis:} GROMACS, Gaussian, DFT/TD-DFT, NumPy, SciPy, spectroscopy.\\
+\textbf{Chemistry \& analysis:} PACKMOL, GROMACS, Gaussian, DFT/TD-DFT, NumPy, SciPy, spectroscopy.\\
 \textbf{Research communication:} LaTeX, scientific visualization, teaching materials.
 \end{document}

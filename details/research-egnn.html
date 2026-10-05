@@ -81,7 +81,7 @@
                     </div>
                     <div>
                         <dt>Project type</dt>
-                        <dd>Research case study</dd>
+                        <dd>Undergraduate thesis · Completed May 1, 2026</dd>
                     </div>
                 </dl>
             </header>
@@ -93,7 +93,7 @@
                         properties relevant to organic room-temperature phosphorescence (RTP). I built the 3D
                         graph pipeline, implemented an eight-layer EGNN, and compared it with a
                         character-level SMILES Transformer under the same split. This was my undergraduate
-                        thesis, supervised by Prof. Jun Jiang.
+                        thesis, supervised by Prof. Jun Jiang and completed on May 1, 2026.
                     </p>
                 </section>
                 <section class="case-section">
@@ -101,41 +101,65 @@
                     <p>
                         The dataset contains approximately <strong>6,000 molecules in total</strong>: 4,800
                         training, 1,050 validation, and <strong>150 test molecules</strong>. The values below
-                        are the reported EGNN test-set results for those 150 molecules.
+                        are the reported test-set results for those 150 molecules. Both models used the same
+                        training, validation, and test split; R² is the coefficient of determination.
                     </p>
-                    <div class="table-wrap">
-                        <table>
+                    <div
+                        class="table-wrap"
+                        style="overflow-x: auto;"
+                        role="region"
+                        aria-label="RTP model comparison"
+                        tabindex="0"
+                    >
+                        <table style="min-width: 660px;">
                             <caption>
-                                Property-specific test R² · n = 150
+                                Property-specific test results · n = 150
                             </caption>
                             <thead>
                                 <tr>
                                     <th scope="col">Target property</th>
                                     <th scope="col">EGNN R²</th>
+                                    <th scope="col">SMILES Transformer R²</th>
+                                    <th scope="col">EGNN RMSE</th>
+                                    <th scope="col">RMSE reduction vs. baseline</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th scope="row">Singlet–triplet gap ΔE(S₁−T₁)</th>
                                     <td>0.8781</td>
+                                    <td>0.4571</td>
+                                    <td>0.1248 eV</td>
+                                    <td>56.1%</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Spin–orbit coupling SOC(T₁→S₁)</th>
                                     <td>0.6263</td>
+                                    <td>0.2418</td>
+                                    <td>3.6183 cm<sup>−1</sup></td>
+                                    <td>29.8%</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Spin–orbit coupling SOC(T₁→S₀)</th>
                                     <td>0.9855</td>
+                                    <td>0.9605</td>
+                                    <td>4.8490 cm<sup>−1</sup></td>
+                                    <td>32.2%</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">S₁ oscillator strength f<sub>osc,S₁</sub></th>
                                     <td>0.7844</td>
+                                    <td>0.4509</td>
+                                    <td>0.1696</td>
+                                    <td>25.9%</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     <p class="caption">
-                        Source: <a href="../Xie_Xiangyu_Resume.pdf">author’s undergraduate research summary (CV)</a>.
+                        Source: author’s undergraduate thesis (completed May 1, 2026), Tables 5.2 and 5.4;
+                        summarized in the <a href="../Xie_Xiangyu_Resume.pdf">CV</a>. RMSE reductions are
+                        relative to the lightweight character-level SMILES Transformer on the same test set.
                     </p>
                 </section>
                 <section class="case-section">
@@ -198,9 +222,10 @@
                     <p>
                         These isolated-molecule targets do not directly predict solid-state device performance,
                         experimental quantum yield, or phosphorescence lifetime; crystal packing and
-                        intermolecular effects are outside this evaluation. Public baseline scores, raw
-                        predictions, and uncertainty estimates are unavailable, so the reported EGNN results
-                        do not establish the magnitude or consistency of improvement over the baseline.
+                        intermolecular effects are outside this evaluation. The labels come from quantum-chemical
+                        calculations, and the comparison uses a fixed split and a lightweight sequence baseline;
+                        it does not represent the performance limit of pretrained molecular language models.
+                        Raw predictions and uncertainty estimates are not publicly released.
                     </p>
                     <a class="text-link" href="../Xie_Xiangyu_Resume.pdf">Author’s research summary in CV ↗</a>
                 </section>
